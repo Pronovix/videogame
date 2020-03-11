@@ -25,7 +25,7 @@ if ($db_driver === 'mysql') {
   ];
 }
 
-$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$'];
+$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$', '^*\.itrainee\.pronovix\.net$'];
 $settings['file_private_path'] = '/mnt/files/private';
 
 // Ideal for development and testing.
