@@ -38,7 +38,7 @@ $settings['file_scan_ignore_directories'] = [
 $settings['file_private_path'] = DRUPAL_ROOT . '/../private';
 
 // Server.
-$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$', '^*\.itrainee\.pronovix\.net$'];
+$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$', '^.*\.itrainee\.pronovix\.net$'];
 
 // DB.
 $databases['default']['default'] = [];
