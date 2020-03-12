@@ -1,40 +1,15 @@
 <?php
 
-/**
- * @file
- * Development environment settings.
- */
-
-include "{$app_root}/{$site_path}/settings.shared.php";
+// @codingStandardsIgnoreFile
 
 use Drupal\Component\Utility\Crypt;
 
-$db_driver = getenv('DB_DRIVER');
-$databases['default']['default'] = [
-  'database' => getenv('DB_NAME'),
-  'username' => getenv('DB_USER'),
-  'password' => getenv('DB_PASSWORD'),
-  'host' => getenv('DB_HOST'),
-  'driver' => $db_driver,
-];
-
-// See: https://www.drupal.org/project/drupal/issues/1650930
-if ($db_driver === 'mysql') {
-  $databases['default']['default']['init_commands'] = [
-    'isolation' => "SET SESSION tx_isolation='READ-COMMITTED'",
-  ];
-}
-
-$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$', '^*\.itrainee\.pronovix\.net$'];
-$settings['file_private_path'] = '/mnt/files/private';
-
-// Ideal for development and testing.
-$settings['extension_discovery_scan_tests'] = true;
-
-// Config sync and hash salt must be set otherwise Drupal adds the database
-// settings again to this file.
+// Config.
+$settings['install_profile'] = 'standard';
 $config_folder = "{$app_root}/../config";
 $config_directories['sync'] = $config_folder . '/sync';
+
+// Hash salt.
 $hash_salt_file = $config_folder . '/hash_salt.txt';
 if (!file_exists($hash_salt_file)) {
   if (!file_exists(basename($hash_salt_file))) {
@@ -46,14 +21,36 @@ if (!file_exists($hash_salt_file)) {
     throw new \RuntimeException(sprintf('File with hash_salt could not be saved to %s.', $hash_salt_file));
   }
 }
-// Hash salt and config
 $settings['hash_salt'] = file_get_contents($hash_salt_file);
 
-// Some sane-defaults for development environment.
-$settings['container_yamls'][] = $app_root . '/sites/development.services.yml.dist';
+// Updates.
+$settings['update_free_access'] = FALSE;
 
-// Include settings.local.php with local overrides if exists.
-$filename = "{$app_root}/{$site_path}/settings.local.php";
-if (file_exists($filename) && realpath($filename) !== realpath(__FILE__)) {
-  include $filename;
+// Entup.
+$settings['entity_update_batch_size'] = 50;
+$settings['entity_update_backup'] = TRUE;
+
+// Files.
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+$settings['file_private_path'] = DRUPAL_ROOT . '/../private';
+
+// Server.
+$settings['trusted_host_patterns'] = ['^webserver$', '^localhost$', '^*\.itrainee\.pronovix\.net$'];
+
+// DB.
+$databases['default']['default'] = [];
+
+// Services.
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
+
+// Local settings.
+if (file_exists(__DIR__ . '/settings.local.php')) {
+  include __DIR__ . '/settings.local.php';
+}
+// Local services.
+if (file_exists(__DIR__ . '/services.local.yml')) {
+  $settings['container_yamls'][] = __DIR__ . '/services.local.yml';
 }
