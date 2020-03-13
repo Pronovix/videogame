@@ -8,7 +8,7 @@ services:
     container_name: "${PROJECT_NAME:-my_project}_database"
     stop_grace_period: 30s
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-password}sudo
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-password}
       MYSQL_DATABASE: ${DB_NAME:-drupal}
       MYSQL_USER: ${DB_USER:-drupal}
       MYSQL_PASSWORD: ${DB_PASSWORD:-password}
