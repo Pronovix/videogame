@@ -38,7 +38,8 @@
                 "web-root": "web/"
             },
             "file-mapping": {
-                "[web-root]/example.gitignore": false
+                "[web-root]/example.gitignore": false,
+                "[web-root]/.eslintrc.json": false
             }
         },
         "installer-paths": {
