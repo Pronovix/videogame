@@ -44,18 +44,29 @@
 
 ### Running composer commands
 
+#### Outside the php container
+
+1. Navigate to your project's folder in terminal
+1. (optional) Make sure containers are up
+1. `docker-compose exec php bash`
+1. `composer COMPOSERCOMMAND`, e.g. `composer install`
+
 #### Inside the php container
 
 1. Navigate to your project's folder in terminal
 1. (optional) Make sure containers are up
 1. `docker-compose exec php composer COMPOSERCOMMAND`, e.g. `docker-compose exec php composer install`
 
-#### Outside the php container
+### Linters
 
-1. Navigate to your project's folder in terminal
-1. (optional) Make sure containers are up
-1. `docker-compose exec php bash`
-2. `composer COMPOSERCOMMAND`, e.g. `composer install`
+#### PHPCS
+
+1. `docker-compose exec php ./vendor/bin/phpcs --standard=phpcs.xml`
+
+#### ESLint
+
+1. (optional, only need to do once) `docker-compose exec node yarn`
+1. `docker-compose exec node yarn run eslint .`
 
 ### Notes
 
