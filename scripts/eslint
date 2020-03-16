@@ -1,6 +1,0 @@
-#!/bin/sh
-
-set -e
-
-docker pull pronovix/dp-eslint:latest
-docker run --rm -v "$(pwd)":/home/node/app/target pronovix/dp-eslint:latest "${@}"
