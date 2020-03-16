@@ -3,6 +3,12 @@
 !.gitignore
 !/.unicompilerc.json
 !/.env.example
+!/.eslintrc.json
+!/.prettierrc.json
+!/.eslintignore
+
+# Dotfolders
+!/.github/
 
 # Salt
 /config/hash_salt.txt
