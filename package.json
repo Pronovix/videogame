@@ -4,7 +4,7 @@
   "description": "Tools for the devportal node container.",
   "author": "Pronovix",
   "license": "GPL-2.0-or-later",
-  "dependencies": {
+  "devDependencies": {
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
@@ -12,6 +12,7 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "minimist": "^1.2.5",
     "prettier": "^1.19.1"
   },
   "scripts": {
