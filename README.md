@@ -15,7 +15,7 @@
 1. `cp web/sites/default/example.settings.local.php web/sites/default/settings.local.php` (modify `settings.local.php` file contents to your needs)
 1. `docker-compose up -d`
 1. `docker-compose exec php composer install`
-1. `docker-compose exec php drush si -y`
+1. `docker-compose exec php drush si config_installer -y`
 1. `docker-compose ps webserver` (take note of the port number, e.g. `32782` if the result was `0.0.0.0:32782->80/tcp`)
 1. Visit `localhost:1234/` in your browser and change `1234` to the number you saw after `0.0.0.0:`, e.g. `localhost:32782/`
 1. Enjoy
