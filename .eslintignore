@@ -3,5 +3,6 @@
 **/node_modules/**
 **/build/**
 **/dist/**
-*.js
-!*.es*.js
+**/assets/**
+**/vendor/**
+webpack*
