@@ -59,9 +59,13 @@
 
 ### Linters
 
-#### PHPCS
+#### PHPCS (PHP code checking with Code Sniffer)
 
 1. `docker-compose exec php ./vendor/bin/phpcs --standard=phpcs.xml`
+
+#### PHPCBF Automatic PHP code fixing with Code Beautifier)
+
+1. `docker-compose exec php ./vendor/bin/phpcbf --standard=phpcs.xml`
 
 #### ESLint
 
