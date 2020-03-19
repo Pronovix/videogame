@@ -1,0 +1,21 @@
+uuid: bc311bd4-4f50-4ae6-80ac-3950ab89c991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genres
+    - node.type.product
+  module:
+    - options
+id: node.product.field_genres
+field_name: field_genres
+entity_type: node
+bundle: product
+label: Genres
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
