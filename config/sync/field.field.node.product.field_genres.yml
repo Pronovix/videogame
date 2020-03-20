@@ -1,12 +1,10 @@
-uuid: bc311bd4-4f50-4ae6-80ac-3950ab89c991
+uuid: 364b56a4-4ce4-4d6d-a845-f6305dfe36d7
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_genres
     - node.type.product
-  module:
-    - options
 id: node.product.field_genres
 field_name: field_genres
 entity_type: node
@@ -18,4 +16,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: string
