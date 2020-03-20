@@ -1,7 +1,14 @@
 <?php
+
 /**
  * @file
- * Theme functions
+ */
+
+declare(strict_types = 1);
+
+/**
+ * @file
+ * Theme functions.
  */
 
 // Include all files from the includes directory.
