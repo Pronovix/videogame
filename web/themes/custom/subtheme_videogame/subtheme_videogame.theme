@@ -2,14 +2,10 @@
 
 /**
  * @file
+ * Theme functions.
  */
 
 declare(strict_types = 1);
-
-/**
- * @file
- * Theme functions.
- */
 
 // Include all files from the includes directory.
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
