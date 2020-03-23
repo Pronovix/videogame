@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/subtheme_videogame.style.css: {}
+  js:
+    assets/js/subtheme_videogame.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

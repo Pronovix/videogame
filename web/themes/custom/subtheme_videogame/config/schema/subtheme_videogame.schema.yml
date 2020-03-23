@@ -1,0 +1,5 @@
+# Schema for the configuration files of the subtheme_videogame theme.
+
+subtheme_videogame.settings:
+  type: theme_settings
+  label: 'subtheme_videogame settings'
