@@ -1,0 +1,29 @@
+uuid: cfd59623-0042-4e24-b682-e24f428c5aa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_minimum_game_session_time
+    - node.type.product
+    - taxonomy.vocabulary.session_time
+id: node.product.field_minimum_game_session_time
+field_name: field_minimum_game_session_time
+entity_type: node
+bundle: product
+label: 'Minimum game session time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      session_time: session_time
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
