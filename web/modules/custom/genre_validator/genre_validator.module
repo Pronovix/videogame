@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains hooks and callbacks for genre_validator.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_bundle_field_info_alter().
+ *
+ * @param $fields
+ * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
+ * @param \Drupal\Core\Entity\EntityTypeInterface $bundle
+ */
+function genre_validator_entity_bundle_field_info_alter(
+  &$fields,
+  EntityTypeInterface $entity_type,
+  $bundle) {
+
+  if (
+    $entity_type->id() === 'node') {
+    if (
+      $bundle === 'product') {
+      if (isset($fields['field_genres'])) {
+        $fields['field_genres']->addConstraint('genre_rules', []);
+      }
+    }
+  }
+}
