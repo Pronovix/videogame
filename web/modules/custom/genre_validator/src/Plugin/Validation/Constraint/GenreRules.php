@@ -17,31 +17,36 @@ use Symfony\Component\Validator\Constraint;
  */
 class GenreRules extends Constraint {
 
-  /** Error message for numbers in the string
+  /**
+   * Error message for numbers in the string
    *
    * @var string
    */
   public string $noNumbers = 'Genres should not contain numbers';
 
-  /** Error message for special characters except dash
+  /**
+   * Error message for special characters except dash
    *
    * @var string
    */
   public string $noComma = 'Only one genre is allowed per line';
 
-  /** Error message for non capitalized first letters
+  /**
+   * Error message for non capitalized first letters
    *
    * @var string
    */
   public string $notCapitalized = '%genre should be capitalized';
 
-  /** Error message for dashes not being followed and preceded by letters
+  /**
+   * Error message for dashes not being followed and preceded by letters
    *
    * @var string
    */
   public string $dashBeforeAfter = 'Dashes should be preceded and followed by a letter';
 
-  /** Error message for using multiple spaces and/or dashes in succession
+  /**
+   * Error message for using multiple spaces and/or dashes in succession
    *
    * @var string
    */
