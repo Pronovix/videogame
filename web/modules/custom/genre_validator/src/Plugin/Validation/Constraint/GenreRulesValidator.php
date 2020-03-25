@@ -32,7 +32,7 @@ class GenreRulesValidator extends ConstraintValidator {
       if (preg_match('/^[A-Z]/', $genre)) {
         $this->context->addViolation($constraint->notCapitalized, ['%value' => $genre->value]);
       }
-// Check if every dash has a letter before and after it
+      // Check if every dash has a letter before and after it
       if (preg_match('/^[A-Za]+(?:-[A-Za]+)?$/D', $genre)) {
         $this->context->addViolation($constraint->dashBeforeAfter, ['%value' => $genre->value]);
       }
