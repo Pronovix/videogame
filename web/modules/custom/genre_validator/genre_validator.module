@@ -5,20 +5,23 @@ declare(strict_types = 1);
 /**
  * @file
  * Contains hooks and callbacks for genre_validator.module.
- */
-
-use Drupal\Core\Entity\EntityTypeInterface;
-
-/**
- * Implements hook_entity_bundle_field_info_alter().
  *
  * @param $fields
  * @param $entity_type
  * @param $bundle
  */
 function genre_validator_entity_bundle_field_info_alter(
+  /**
+   * @param
+   */
   $fields,
+  /**
+   * @param
+   */
   $entity_type,
+  /**
+   * @param
+   */
   $bundle) {
 
   if (
