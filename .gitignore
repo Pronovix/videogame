@@ -2,7 +2,7 @@
 /.*
 !.gitignore
 !/.unicompilerc.json
-!/.env.example
+!/.env
 !/.eslintrc.json
 !/.prettierrc.json
 !/.eslintignore
@@ -36,7 +36,6 @@
 /.idea/
 
 # Ignore .env files as they are personal
-/.env
 .editorconfig
 .gitattributes
 
