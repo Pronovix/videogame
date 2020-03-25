@@ -11,7 +11,7 @@ use Symfony\Component\Validator\ConstraintValidator;
  *
  * @package Drupal\genre_validator\Plugin\Validation\Constraint
  */
-class genreRulesValidator extends ConstraintValidator {
+class GenreRulesValidator extends ConstraintValidator {
 
   /**
    * {@inheritdoc}
@@ -21,11 +21,11 @@ class genreRulesValidator extends ConstraintValidator {
 
     foreach ($genres as $genre) {
       // Check if the string has any numbers
-      if (preg_match('/[123456789]/', $genre)) {
+      if (preg_match('/[d]/', $genre)) {
         $this->context->addViolation($constraint->noNumbers, ['%value' => $genre->value]);
       }
       // Check if the string has any special characters
-      if (preg_match('/[\'^£$%&*()}{@#~?<>,|=_+¬-]/', $genre)) {
+      if (preg_match('/[\W]+[^-]/', $genre)) {
         $this->context->addViolation($constraint->noComma, ['%value' => $genre->value]);
       }
       // Check if the first letter is capitalized
@@ -37,7 +37,7 @@ class genreRulesValidator extends ConstraintValidator {
         $this->context->addViolation($constraint->dashBeforeAfter, ['%value' => $genre->value]);
       }
       //Check if there are more then one consecutive spaces or dashes anywhere
-      if (preg_match('/^(\w+(-\w+)*)(\s\w+(-\w+)*)*$/', $genre)) {
+      if (preg_match('/^(\w+([\s-]\w+)?)+$/', $genre)) {
         $this->context->addViolation($constraint->oneDashOrSpace, ['%value' => $genre->value]);
 
       }

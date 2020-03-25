@@ -11,11 +11,11 @@ use Drupal\Core\Entity\EntityTypeInterface;
  * Implements hook_entity_bundle_field_info_alter().
  *
  * @param $fields
- * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
- * @param \Drupal\Core\Entity\EntityTypeInterface $bundle
+ * @param $entity_type
+ * @param $bundle
  */
 function genre_validator_entity_bundle_field_info_alter(
-  &$fields,
+  $fields,
   EntityTypeInterface $entity_type,
   $bundle) {
 

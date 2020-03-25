@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraint;
  *   type = "string"
  * )
  */
-class genreRules extends Constraint {
+class GenreRules extends Constraint {
 
   // The message that will be shown if the genre submitted is not a string.
   public $noNumbers = 'Genres should not contain numbers';
