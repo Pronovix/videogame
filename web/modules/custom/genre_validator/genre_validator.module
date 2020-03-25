@@ -6,9 +6,9 @@ declare(strict_types = 1);
  * @file
  * Contains hooks and callbacks for genre_validator.module.
  *
- * @param $fields
- * @param $entity_type
- * @param $bundle
+ * @param array $fields
+ * @param array $entity_type
+ * @param array $bundle
  */
 function genre_validator_entity_bundle_field_info_alter(
   /**
@@ -18,11 +18,11 @@ function genre_validator_entity_bundle_field_info_alter(
   /**
    * @param
    */
-  $entity_type,
+ array &$entity_type,
   /**
    * @param
    */
-  $bundle) {
+ array &$bundle) {
 
   if (
     $entity_type->id() === 'node') {
