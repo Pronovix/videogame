@@ -14,7 +14,7 @@ function genre_validator_entity_bundle_field_info_alter(
   /**
    * @param
    */
-  $fields,
+ array &$fields,
   /**
    * @param
    */
