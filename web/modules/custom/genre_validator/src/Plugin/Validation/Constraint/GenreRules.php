@@ -1,5 +1,6 @@
 <?php
-declare(strict_types=1);
+
+declare(strict_types = 1);
 
 namespace Drupal\genre_validator\Plugin\Validation\Constraint;
 
@@ -14,16 +15,17 @@ use Symfony\Component\Validator\Constraint;
  *   type = "string"
  * )
  */
+
 class GenreRules extends Constraint {
 
-  public $noNumbers = 'Genres should not contain numbers';
+  public string $noNumbers = 'Genres should not contain numbers';
 
-  public $noComma = 'Only one genre is allowed per line';
+  public string $noComma = 'Only one genre is allowed per line';
 
-  public $notCapitalized = '%genre should be capitalized';
+  public string $notCapitalized = '%genre should be capitalized';
 
-  public $dashBeforeAfter = 'Dashes should be preceded and followed by a letter';
+  public string $dashBeforeAfter = 'Dashes should be preceded and followed by a letter';
 
-  public $oneDashOrSpace = 'There should be one space or dash between words';
+  public string $oneDashOrSpace = 'There should be one space or dash between words';
 
 }
