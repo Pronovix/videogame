@@ -17,3 +17,5 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'use text format text_filter'
+  - 'use text format text_filter_basic'
