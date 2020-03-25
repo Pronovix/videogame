@@ -1,12 +1,12 @@
-uuid: f9e35f23-69f7-4b9d-9106-2593195c8d71
+uuid: 1891bb14-62c0-44bd-b3fd-63c3aceed041
 langcode: en
 status: true
 dependencies:
   module:
     - editor
-name: 'Text filter'
-format: text_filter
-weight: 0
+name: 'Basic text filter'
+format: text_filter_basic
+weight: -10
 filters:
   editor_file_reference:
     id: editor_file_reference
@@ -24,7 +24,7 @@ filters:
     id: filter_caption
     provider: filter
     status: false
-    weight: -45
+    weight: -43
     settings: {  }
   filter_html:
     id: filter_html
@@ -39,30 +39,30 @@ filters:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -43
+    weight: -42
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: true
-    weight: -44
+    weight: -46
     settings:
       filter_url_length: 72
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: -42
+    weight: -45
     settings: {  }
   filter_align:
     id: filter_align
     provider: filter
-    status: true
+    status: false
     weight: -47
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
-    status: false
-    weight: -46
+    status: true
+    weight: -44
     settings: {  }
