@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types = 1);
 
 namespace Drupal\genre_validator\Plugin\Validation\Constraint;
 
@@ -7,16 +8,14 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
 /**
- * Validates the genre_rules Constraint
+ * Validates the genre_rules Constraint.
  *
- * @package Drupal\genre_validator\Plugin\Validation\Constraint
  */
 class GenreRulesValidator extends ConstraintValidator {
 
   /**
    * {@inheritdoc}
    */
-
   public function validate($genres, Constraint $constraint) {
 
     foreach ($genres as $genre) {
