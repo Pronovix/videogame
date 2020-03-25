@@ -76,5 +76,5 @@ node_modules
 # Caches.
 .sass-cache
 
-# CSS files
-web/themes/custom/**/*.css
+# Assets folder
+web/themes/custom/subtheme_videogame/assets

@@ -39,8 +39,8 @@ $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
-$orange:  #F57C00 !default;
-$yellow:  #ffc107 !default;
+$orange:  #F57C00;
+$yellow:  #F3B51B;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
@@ -73,7 +73,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$dark:          $black;
 $orange-link:   #F3B51B;
 
 $theme-colors: () !default;
@@ -231,7 +231,7 @@ $grid-gutter-width:           30px !default;
 $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
-$border-width:                1px !default;
+$border-width:                .125rem;
 $border-color:                $gray-300 !default;
 
 $border-radius:               .125rem;
@@ -288,19 +288,19 @@ $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.875;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 3.813;
+$h2-font-size:                $font-size-base * 3;
+$h3-font-size:                $font-size-base * 2.438;
+$h4-font-size:                $font-size-base * 1.953;
+$h5-font-size:                $font-size-base * 1.563;
+$h6-font-size:                $font-size-base * 1.25;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        3.125rem;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;
@@ -325,7 +325,7 @@ $blockquote-small-color:      $gray-600 !default;
 $blockquote-small-font-size:  $small-font-size !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
 
-$hr-border-color:             rgba($black, .1) !default;
+$hr-border-color:             $orange;
 $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;
@@ -382,7 +382,7 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem;
+$input-btn-padding-y:         0.938rem;
 $input-btn-padding-x:         1.875rem;
 $input-btn-font-family:       Montserrat;
 $input-btn-font-size:         $font-size-base;
@@ -427,7 +427,7 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
-$btn-font-weight:             $font-weight-normal !default;
+$btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;

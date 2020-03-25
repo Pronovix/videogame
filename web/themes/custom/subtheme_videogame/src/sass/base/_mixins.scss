@@ -1,0 +1,21 @@
+$orange: #F57C00;
+$lightgrey: #EFEFEF;
+$yellow: #F3B51B;
+$darkgrey: #455A64;
+$black: #000000;
+$white: #FFFFFF;
+
+
+
+.btn-primary {
+    @include button-variant($orange, $orange, darken($lightgrey, 0%), darken($lightgrey,0%), darken($yellow,0%), darken($yellow,0%));
+}
+
+.btn-secondary {
+    @include button-variant($black, $orange, darken($darkgrey, 0%), darken($white,0%), darken($black,0%), darken($yellow,0%));
+}
+
+.navbar{
+  background-color: $black;
+}
+
