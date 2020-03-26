@@ -27,6 +27,12 @@
 1. `docker-compose ps webserver` (take note of the port number, e.g. `32782` if the result was `0.0.0.0:32782->80/tcp`)
 1. Visit `localhost:1234/` in your browser and change `1234` to the number you saw after `0.0.0.0:`, e.g. `localhost:32782/`
 
+#### Building && compiling the theme
+
+1. Watch for changes: `docker-compose exec node yarn --cwd web/themes/custom/recipe_theme run watch`
+1. Build for dev env: `docker-compose exec node yarn --cwd web/themes/custom/recipe_theme run dev`
+1. Build for production env: `docker-compose exec node yarn --cwd web/themes/custom/recipe_theme run production`
+
 ### Running drush commands
 
 #### Outside the php container
