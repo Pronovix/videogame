@@ -1,0 +1,22 @@
+uuid: 82646b83-69f5-4bd2-a1e8-73f5aeb13a08
+langcode: en
+status: true
+dependencies:
+  theme:
+    - subtheme_videogame
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: subtheme_videogame_local_tasks
+theme: subtheme_videogame
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

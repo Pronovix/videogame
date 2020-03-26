@@ -1,0 +1,20 @@
+uuid: 5acbdf32-229a-4536-a690-d0d0495b12c4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - subtheme_videogame
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: subtheme_videogame_page_title
+theme: subtheme_videogame
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

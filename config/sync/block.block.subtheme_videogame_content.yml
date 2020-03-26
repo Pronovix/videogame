@@ -1,0 +1,22 @@
+uuid: 8140cd82-f8fa-4f32-82ea-ea843445fcb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - subtheme_videogame
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: subtheme_videogame_content
+theme: subtheme_videogame
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

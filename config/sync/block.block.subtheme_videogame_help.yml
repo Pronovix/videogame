@@ -1,0 +1,22 @@
+uuid: e2ab0fbd-3718-4460-8c34-403e2a0b1dcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - subtheme_videogame
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: subtheme_videogame_help
+theme: subtheme_videogame
+region: navbar_branding
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

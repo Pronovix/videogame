@@ -1,0 +1,22 @@
+uuid: 53c7bee0-d7be-41ac-9b78-986744987913
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - subtheme_videogame
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: subtheme_videogame_messages
+theme: subtheme_videogame
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
