@@ -27,6 +27,13 @@
 1. `docker-compose ps webserver` (take note of the port number, e.g. `32782` if the result was `0.0.0.0:32782->80/tcp`)
 1. Visit `localhost:1234/` in your browser and change `1234` to the number you saw after `0.0.0.0:`, e.g. `localhost:32782/`
 
+#### Building && compiling the theme
+
+* (optional, only need to do once or occasioanlly) Install packages: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame`
+* Watch for changes: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run watch`
+* Build for dev env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run dev`
+* Build for production env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run production`
+
 ### Running drush commands
 
 #### Outside the php container

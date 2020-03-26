@@ -1,6 +1,7 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
 @import "~bootstrap/scss/functions";
+@import "base/colors";
 @import "base/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/print";
@@ -52,6 +53,7 @@
 // Component
 // -----------------------------------------------------------------------------
 @import "../components/node/node";
+@import "../components/navbar/navbar";
 
 // Other
 // -----------------------------------------------------------------------------
