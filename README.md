@@ -29,10 +29,10 @@
 
 #### Building && compiling the theme
 
-1. (optional, only need to do once or occasioanlly) Install packages: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame`
-1. Watch for changes: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run watch`
-1. Build for dev env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run dev`
-1. Build for production env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run production`
+* (optional, only need to do once or occasioanlly) Install packages: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame`
+* Watch for changes: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run watch`
+* Build for dev env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run dev`
+* Build for production env: `docker-compose exec node yarn --cwd web/themes/custom/subtheme_videogame run production`
 
 ### Running drush commands
 
