@@ -1,0 +1,22 @@
+uuid: d2eb9ab7-e531-41c9-a261-13ea09b4394c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: product
+label: Product
+type: 'canonical_entities:node'
+pattern: 'videogame/[node:title]'
+selection_criteria:
+  dffc4821-b000-49f2-9c65-9cab27c30c72:
+    id: node_type
+    bundles:
+      product: product
+    negate: false
+    context_mapping:
+      node: node
+    uuid: dffc4821-b000-49f2-9c65-9cab27c30c72
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,10 @@
+uuid: 477f0400-cb32-4bca-acad-ad223b3b7452
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.token
+label: Token
+targetEntityType: user
+cache: true
