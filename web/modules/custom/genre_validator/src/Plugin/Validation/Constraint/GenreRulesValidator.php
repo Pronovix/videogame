@@ -18,27 +18,28 @@ class GenreRulesValidator extends ConstraintValidator {
   public function validate($genres, Constraint $constraint) {
 
     foreach ($genres as $genre) {
+      /** @var \Drupal\Core\Field\Plugin\Field\FieldType\StringItem $genre */
 
-      if (preg_match('/[d]/', $genre)) {
+      if (preg_match('/[\d]/', $genre->value)) {
         $this->context->addViolation($constraint->noNumbers, ['%value' => $genre->value]);
       }
 
-      if (preg_match('/[\W]+[^-]/', $genre)) {
+      if (!preg_match('/[^\W]+(\b(?! |-)\b)/', $genre->value)) {
         $this->context->addViolation($constraint->noComma, ['%value' => $genre->value]);
       }
 
-      if (preg_match('/^[A-Z]/', $genre)) {
+      if (preg_match('/(\b(?! |-)\b)+[a-z]/', $genre->value)) {
         $this->context->addViolation($constraint->notCapitalized, ['%value' => $genre->value]);
       }
 
-      if (preg_match('/^[A-Za]+(?:-[A-Za]+)?$/D', $genre)) {
+      if (!preg_match('/^(?!(?:.*-(?=$|-))|-).*$/', $genre->value)) {
         $this->context->addViolation($constraint->dashBeforeAfter, ['%value' => $genre->value]);
       }
 
-      if (preg_match('/^(\w+([\s-]\w+)?)+$/', $genre)) {
+      if (!preg_match('/^(\w+([\s-]\w+)?)+$/', $genre->value)) {
         $this->context->addViolation($constraint->oneDashOrSpace, ['%value' => $genre->value]);
-
       }
+
     }
 
   }
