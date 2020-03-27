@@ -24,10 +24,10 @@ use Drupal\Core\Entity\EntityTypeInterface;
  *   This parameter is used to refer to the genre field.
  * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
  *   This parameter is used to refer to the node entity type.
- * @param array $bundle
+ * @param string $bundle
  *   This parameter is used to refer to the product content type bundle.
  */
-function genre_validator_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, array $bundle): void {
+function genre_validator_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, string $bundle): void {
 
   if ($entity_type->id() === 'node') {
     if ($bundle === 'product') {
