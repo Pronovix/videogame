@@ -1,0 +1,6 @@
+name: Genre Validator Module
+description: Adds validation rules to the genre field on the product page.
+package: Custom
+type: module
+version: 1.0
+core: 8.x
