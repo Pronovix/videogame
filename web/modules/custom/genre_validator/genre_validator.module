@@ -1,34 +1,36 @@
 <?php
 
-declare(strict_types = 1);
-
 /**
  * @file
+ * This file adds the constraints to the Genre field of the Product CT.
+ *
+ * @category Validator Hook
  */
+
+declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityTypeInterface;
 
-
 /**
- * @file
  * Contains hooks and callbacks for genre_validator.module.
  *
+ * @file
  */
-/**
- * @param array $fields
- * @param EntityTypeInterface $entity_type
- * @param $bundle
- */
-function genre_validator_entity_bundle_field_info_alter(
-  array &$fields,
-  EntityTypeInterface $entity_type,
-  $bundle
-) {
 
-  if (
-    $entity_type->id() === 'node') {
-    if (
-      $bundle === 'product') {
+/**
+ * Parameters used for the hook.
+ *
+ * @param array $fields
+ *   This parameter is used to refer to the genre field.
+ * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
+ *   This parameter is used to refer to the node entity type.
+ * @param string $bundle
+ *   This parameter is used to refer to the product content type bundle.
+ */
+function genre_validator_entity_bundle_field_info_alter(array &$fields, EntityTypeInterface $entity_type, string $bundle): void {
+
+  if ($entity_type->id() === 'node') {
+    if ($bundle === 'product') {
       if (isset($fields['field_genres'])) {
         $fields['field_genres']->addConstraint('genre_rules', []);
       }
