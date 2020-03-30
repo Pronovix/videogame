@@ -15,13 +15,13 @@ settings:
         -
           name: Formatting
           items:
-            - Bold
             - Italic
+            - Bold
             - Underline
             - Superscript
             - Subscript
         -
-          name: Links
+          name: Linking
           items:
             - DrupalLink
             - DrupalUnlink
@@ -33,21 +33,24 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
             - DrupalImage
-        -
-          name: Tools
-          items:
+            - Blockquote
             - SpecialChar
-            - HorizontalRule
-            - Source
+            - Table
+        -
+          name: 'Text style'
+          items:
+            - JustifyBlock
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
   plugins:
     stylescombo:
       styles: ''
     language:
       language_list: un
 image_upload:
-  status: false
+  status: true
   scheme: public
   directory: inline-images
   max_size: ''
