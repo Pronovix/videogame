@@ -7,7 +7,7 @@
 <div class="page">
   {% embed '@radix/navbar/navbar.twig' with {
     placement: 'sticky-top',
-    container: 'fixed',
+    container: 'fluid',
     color: 'dark',
     utility_classes: ['bg-dark'],
   } %}
@@ -33,10 +33,10 @@
     {% endblock %}
   {% endembed %}
 
-  <main class="pt-5 pb-5">
+  <main class="">
     {% if page.header %}
-      <header class="page__header mb-3">
-        <div class="container">
+      <header class="page__header">
+        <div class="container-fluid">
           {{ page.header }}
         </div>
       </header>
@@ -44,7 +44,7 @@
 
     {% if page.content %}
       <div class="page__content">
-        <div class="container">
+        <div class="container-fluid">
           {{ page.content }}
         </div>
       </div>
@@ -53,8 +53,8 @@
 
   {% if page.footer %}
     <footer class="page__footer">
-      <div class="container">
-        <div class="d-flex justify-content-md-between align-items-md-center">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-around">
           {{ page.footer }}
         </div>
       </div>

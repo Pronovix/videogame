@@ -1,0 +1,8 @@
+uuid: f550fbb3-8c69-46a1-8703-3b53fa7ea4d2
+langcode: en
+status: true
+dependencies: {  }
+id: seasonal_games
+label: 'Seasonal games'
+revision: 0
+description: ''

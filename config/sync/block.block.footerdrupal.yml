@@ -1,0 +1,25 @@
+uuid: 652f17fe-e02f-4c3d-8ac0-d0b711fd6c2f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a94beaec-aa7f-45c0-8664-c80b5ba9a429'
+  module:
+    - block_content
+  theme:
+    - subtheme_videogame
+id: footerdrupal
+theme: subtheme_videogame
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:a94beaec-aa7f-45c0-8664-c80b5ba9a429'
+settings:
+  id: 'block_content:a94beaec-aa7f-45c0-8664-c80b5ba9a429'
+  label: 'Footer Drupal'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

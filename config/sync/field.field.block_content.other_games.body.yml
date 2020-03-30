@@ -1,0 +1,27 @@
+uuid: f90c99b1-72e9-4467-9a75-2da9e76655c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.other_games
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.other_games.body
+field_name: body
+entity_type: block_content
+bundle: other_games
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<h2>Other games you might like to play</h2>\r\n"
+    format: full_html
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

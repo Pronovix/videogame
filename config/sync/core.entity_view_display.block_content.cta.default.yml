@@ -1,0 +1,33 @@
+uuid: 10d787c2-d3c9-4fcc-90f6-5392d973c45a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.field.block_content.cta.body
+    - field.field.block_content.cta.field_cta_image
+  module:
+    - image
+    - text
+id: block_content.cta.default
+targetEntityType: block_content
+bundle: cta
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

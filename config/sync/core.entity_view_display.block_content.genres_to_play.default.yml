@@ -1,0 +1,22 @@
+uuid: 11855300-042a-45e3-aade-aaaf93147dd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.field.block_content.genres_to_play.body
+  module:
+    - text
+id: block_content.genres_to_play.default
+targetEntityType: block_content
+bundle: genres_to_play
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

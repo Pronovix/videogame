@@ -1,0 +1,23 @@
+uuid: 5b3d1d14-cb98-44dc-9f61-3b6dc1815f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.cta.body
+field_name: body
+entity_type: block_content
+bundle: cta
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

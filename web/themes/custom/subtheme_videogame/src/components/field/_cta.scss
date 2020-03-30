@@ -1,0 +1,15 @@
+.cta {
+  &__body {
+    height: 50vh;
+    text-align: center;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.8;
+    overflow: hidden;
+    height: 50vh;
+  }
+}

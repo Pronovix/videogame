@@ -1,0 +1,22 @@
+uuid: c425bea6-cb15-47c5-8bbb-37505db60236
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_game
+    - field.field.block_content.featured_game.body
+  module:
+    - text
+id: block_content.featured_game.default
+targetEntityType: block_content
+bundle: featured_game
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: d6082212-524c-4231-8efb-5ca12bc2d865
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.latest_products
+    - field.field.block_content.latest_products.body
+  module:
+    - text
+id: block_content.latest_products.default
+targetEntityType: block_content
+bundle: latest_products
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

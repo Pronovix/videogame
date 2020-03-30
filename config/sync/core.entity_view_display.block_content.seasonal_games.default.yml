@@ -1,0 +1,22 @@
+uuid: 456dd32d-2a52-4bdc-b7f3-9c5dd8f1bf14
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.seasonal_games
+    - field.field.block_content.seasonal_games.body
+  module:
+    - text
+id: block_content.seasonal_games.default
+targetEntityType: block_content
+bundle: seasonal_games
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

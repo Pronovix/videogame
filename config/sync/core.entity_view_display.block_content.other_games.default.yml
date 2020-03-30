@@ -1,0 +1,22 @@
+uuid: 4dfd7870-f16e-40d0-9d23-8042289571de
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.other_games
+    - field.field.block_content.other_games.body
+  module:
+    - text
+id: block_content.other_games.default
+targetEntityType: block_content
+bundle: other_games
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

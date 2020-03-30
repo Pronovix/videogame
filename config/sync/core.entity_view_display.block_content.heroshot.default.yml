@@ -1,0 +1,33 @@
+uuid: b7bbf76d-7285-4bf0-9c02-41168b95999c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heroshot
+    - field.field.block_content.heroshot.body
+    - field.field.block_content.heroshot.field_heroshot_image
+  module:
+    - image
+    - text
+id: block_content.heroshot.default
+targetEntityType: block_content
+bundle: heroshot
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_heroshot_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

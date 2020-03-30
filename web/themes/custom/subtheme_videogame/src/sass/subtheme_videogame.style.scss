@@ -1,5 +1,6 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
+
 @import "~bootstrap/scss/functions";
 @import "base/colors";
 @import "base/variables";
@@ -43,6 +44,7 @@
 @import "base/helpers";
 @import "base/elements";
 @import "base/typography";
+@import "base/buttons";
 
 // Layout
 // -----------------------------------------------------------------------------
@@ -54,6 +56,10 @@
 // -----------------------------------------------------------------------------
 @import "../components/node/node";
 @import "../components/navbar/navbar";
+@import "../components/field/heroshot";
+@import "../components/field/company-information";
+@import "../components/field/cta";
+
 
 // Other
 // -----------------------------------------------------------------------------
