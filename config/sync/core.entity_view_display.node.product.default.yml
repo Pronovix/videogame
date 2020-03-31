@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.product.title
     - field.field.node.product.body
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
@@ -10,8 +11,136 @@ dependencies:
     - node.type.product
   module:
     - image
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: hero
+        components:
+          3877ed8d-f647-483e-ba6b-f7c04a36f993:
+            uuid: 3877ed8d-f647-483e-ba6b-f7c04a36f993
+            region: content
+            configuration:
+              id: 'field_block:node:product:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          d28cf348-e5ad-4601-8202-e435d0468cd1:
+            uuid: d28cf348-e5ad-4601-8202-e435d0468cd1
+            region: content
+            configuration:
+              id: 'field_block:node:product:title'
+              label: 'Product name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: description
+        components:
+          1e3cffb6-ec00-49f7-935b-4a971bd0a9fc:
+            uuid: 1e3cffb6-ec00-49f7-935b-4a971bd0a9fc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          416ea3ff-18dd-4d83-8714-5eb15cb96e21:
+            uuid: 416ea3ff-18dd-4d83-8714-5eb15cb96e21
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_genres'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: sessiontime
+        components:
+          efecf171-c8f0-46cd-aad3-374b49d61dbc:
+            uuid: efecf171-c8f0-46cd-aad3-374b49d61dbc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_minimum_game_session_time'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: links
+          column_widths: 33-34-33
+        components:
+          d63835a9-034b-4574-9fd6-a0ee4c508d2c:
+            uuid: d63835a9-034b-4574-9fd6-a0ee4c508d2c
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:product:links'
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.product.default
 targetEntityType: node
 bundle: product
