@@ -5,10 +5,11 @@ dependencies: {  }
 name: product_image_style
 label: 'Product page image style (500x250)'
 effects:
-  c0c074b8-89ba-4acf-863b-5d7e3b152c56:
-    uuid: c0c074b8-89ba-4acf-863b-5d7e3b152c56
-    id: image_resize
+  2f2992ac-3c9c-43a6-beaf-34993aff86fa:
+    uuid: 2f2992ac-3c9c-43a6-beaf-34993aff86fa
+    id: image_scale_and_crop
     weight: 1
     data:
       width: 500
       height: 250
+      anchor: center-center
