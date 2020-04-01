@@ -22,9 +22,9 @@ use Drupal\node\Entity\Node;
  *   Parameter for variables.
  */
 function subtheme_videogame_preprocess_page(array &$variables): void {
-  if (isset($variables["node"]) && $variables["node"] instanceof Node) {
+  if (isset($variables['node']) && $variables['node'] instanceof Node) {
     // Create variable out of the current node type.
-    $node_type = $variables["node"]->getType();
+    $node_type = $variables['node']->getType();
     // Remove page title block.
     if ($node_type == 'product') {
       unset($variables['page']['header']['subtheme_videogame_page_title']);
