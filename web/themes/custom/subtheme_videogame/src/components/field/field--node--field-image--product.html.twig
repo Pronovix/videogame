@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template for an image field.
+ */
+#}
+
+<div{{ attributes.addClass('field--image') }}>
+  <img{%- for item in items -%}>
+    {{ item.content }}
+  {%- endfor -%}
+</img>
+  </div>
+

@@ -2,8 +2,6 @@ uuid: 5acbdf32-229a-4536-a690-d0d0495b12c4
 langcode: en
 status: true
 dependencies:
-  module:
-    - ctools
   theme:
     - subtheme_videogame
 _core:
@@ -19,11 +17,4 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      product: product
-    negate: true
-    context_mapping:
-      node: '@node.node_route_context:node'
+visibility: {  }
