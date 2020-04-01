@@ -1,8 +1,8 @@
-uuid: 6764d201-fe60-4947-9a21-7a9c1c35df9d
+uuid: ac8fd6a8-dc95-4b87-8065-35684e5c2c5f
 langcode: en
 status: true
 dependencies: {  }
 id: cta
 label: CTA
 revision: 0
-description: ''
+description: 'The CTA contains an image, two text fields and a button.'

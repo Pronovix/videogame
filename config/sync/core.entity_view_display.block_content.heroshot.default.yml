@@ -1,11 +1,14 @@
-uuid: b7bbf76d-7285-4bf0-9c02-41168b95999c
+uuid: d2c87bd8-acdb-477e-a3ea-44776934b18a
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.heroshot
     - field.field.block_content.heroshot.body
+    - field.field.block_content.heroshot.field_headline
     - field.field.block_content.heroshot.field_heroshot_image
+    - field.field.block_content.heroshot.field_su
+    - field.field.block_content.heroshot.field_title
   module:
     - image
     - text
@@ -17,9 +20,16 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_headline:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_heroshot_image:
     weight: 0
@@ -29,5 +39,19 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_su:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden: {  }

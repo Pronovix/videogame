@@ -1,4 +1,4 @@
-uuid: e5348346-f7f0-48ca-b0d4-e79ff904fd16
+uuid: 5e4df536-096f-4064-9007-6126f8af9813
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - block_content
     - file
     - image
-id: block_content.field_cta_image
-field_name: field_cta_image
+id: block_content.field_cta_i
+field_name: field_cta_i
 entity_type: block_content
 type: image
 settings:

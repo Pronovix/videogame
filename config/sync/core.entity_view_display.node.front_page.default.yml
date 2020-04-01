@@ -1,49 +1,82 @@
-uuid: 3521ea9a-1c0a-4fdc-aa83-193071183687
+uuid: 112bd544-91aa-4d97-a07b-836a1bddd71a
 langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
+    - block_content.type.cta
+    - block_content.type.heroshot
     - field.field.node.front_page.body
     - node.type.front_page
   module:
     - layout_builder
+    - layout_discovery
     - text
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: true
+    allow_custom: false
     enabled: true
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
-          label: ''
+          label: 'Heroshot section'
         components:
-          af774da9-15ef-4687-8eff-0ebd26253d8c:
-            uuid: af774da9-15ef-4687-8eff-0ebd26253d8c
+          c46be19e-f5db-4ad9-a5d1-91daba8bf253:
+            uuid: c46be19e-f5db-4ad9-a5d1-91daba8bf253
             region: content
             configuration:
+              id: 'inline_block:heroshot'
+              label: Heroshot
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:front_page:links'
+              view_mode: full
+              block_revision_id: 61
+              block_serialized: null
+              context_mapping: {  }
             additional: {  }
             weight: 0
-          79cb1ec4-57ea-47bf-86d9-940c6df1e3eb:
-            uuid: 79cb1ec4-57ea-47bf-86d9-940c6df1e3eb
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Company information section'
+        components:
+          4c2528d8-5802-40ca-86fa-6f2b86b52786:
+            uuid: 4c2528d8-5802-40ca-86fa-6f2b86b52786
             region: content
             configuration:
+              id: 'inline_block:basic'
+              label: 'Company information'
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:front_page:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
+              view_mode: full
+              block_revision_id: 62
+              block_serialized: null
+              context_mapping: {  }
             additional: {  }
-            weight: 1
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'CTA section'
+        components:
+          f79ffca9-3007-4522-bcd2-b56e736a54e0:
+            uuid: f79ffca9-3007-4522-bcd2-b56e736a54e0
+            region: content
+            configuration:
+              id: 'inline_block:cta'
+              label: CTA
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 63
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
 id: node.front_page.default
 targetEntityType: node
@@ -62,4 +95,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  layout_builder__layout: true

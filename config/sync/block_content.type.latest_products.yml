@@ -1,8 +1,0 @@
-uuid: d264ad1b-8a9e-4a08-8e2c-19a427bed8d0
-langcode: en
-status: true
-dependencies: {  }
-id: latest_products
-label: 'Latest products'
-revision: 0
-description: ''

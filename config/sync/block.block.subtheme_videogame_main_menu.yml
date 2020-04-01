@@ -12,8 +12,8 @@ _core:
   default_config_hash: ERtUwuUKdqiRLiXjBoV7gcIIZgt2IdqWBzqsqtm63w4
 id: subtheme_videogame_main_menu
 theme: subtheme_videogame
-region: navbar_branding
-weight: 10
+region: navbar_left
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:

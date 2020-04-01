@@ -11,7 +11,7 @@ _core:
 id: subtheme_videogame_search
 theme: subtheme_videogame
 region: navbar_branding
-weight: -1
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

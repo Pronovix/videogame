@@ -1,11 +1,13 @@
-uuid: 10d787c2-d3c9-4fcc-90f6-5392d973c45a
+uuid: 32f14c5b-2f37-4be1-aeb3-84754bafbe26
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_cta_image
+    - field.field.block_content.cta.field_cta_i
+    - field.field.block_content.cta.field_text1
+    - field.field.block_content.cta.field_text2
   module:
     - image
     - text
@@ -17,11 +19,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_cta_image:
+  field_cta_i:
     weight: 0
     label: hidden
     settings:
@@ -29,5 +31,19 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_text1:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text2:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
 hidden: {  }

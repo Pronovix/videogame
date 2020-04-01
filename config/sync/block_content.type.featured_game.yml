@@ -1,8 +1,0 @@
-uuid: e1dccc96-6420-4525-bdca-589600673161
-langcode: en
-status: true
-dependencies: {  }
-id: featured_game
-label: 'Featured game'
-revision: 0
-description: ''

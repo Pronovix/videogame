@@ -1,8 +1,0 @@
-uuid: 003db13d-11cb-47ad-b093-e3657e5fd8c3
-langcode: en
-status: true
-dependencies: {  }
-id: genres_to_play
-label: 'Genres to play'
-revision: 0
-description: ''

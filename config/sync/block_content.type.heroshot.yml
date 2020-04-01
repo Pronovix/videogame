@@ -1,8 +1,8 @@
-uuid: f59432d1-7380-4c55-943f-e3a9986cf784
+uuid: 3a251d59-82c8-4975-8653-621253420bd3
 langcode: en
 status: true
 dependencies: {  }
 id: heroshot
 label: Heroshot
 revision: 0
-description: ''
+description: 'Heroshot contains a title, a headline, a suporting headline and a cta button.'

@@ -1,32 +1,22 @@
+
+
 .heroshot {
-  &__body {
-    height: 100vh;
-    text-align: center;
-    position: relative;
-  }
-
-  &__name {
-    text-transform: uppercase;
-    color: $orange;
-    font-weight: 900;
-  }
-
-  &__headline {
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 1% 0 2% 0%;
-  }
-
-  &__supportingheadline {
+  &__field-su {
     font-weight: bold;
     margin-bottom: 3%;
   }
 
   &__image {
     position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: -1;
-    opacity: 0.8;
+    height: 100vh;
+    opacity: 0.5;
     overflow: hidden;
-    height: 90vh;
   }
 }
+
+

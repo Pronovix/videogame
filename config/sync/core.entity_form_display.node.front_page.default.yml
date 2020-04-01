@@ -1,10 +1,9 @@
-uuid: 0b191d2b-d629-4608-8655-91faf6c164bc
+uuid: 508e9ba2-57ea-4124-9650-fd52d06ad0e9
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.front_page.body
-    - field.field.node.front_page.layout_builder__layout
     - node.type.front_page
   module:
     - path
@@ -75,5 +74,4 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden:
-  layout_builder__layout: true
+hidden: {  }

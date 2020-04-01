@@ -1,11 +1,10 @@
-uuid: 6fd47ef0-85fe-474a-8603-0a8bbc632bd2
+uuid: 72705b00-227f-4fe5-9fa1-ec5ac5937908
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.front_page.body
-    - field.field.node.front_page.layout_builder__layout
     - node.type.front_page
   module:
     - text
@@ -28,5 +27,4 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden:
-  layout_builder__layout: true
+hidden: {  }

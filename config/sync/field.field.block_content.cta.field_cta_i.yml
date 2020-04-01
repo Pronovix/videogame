@@ -1,14 +1,14 @@
-uuid: f167a65c-2851-4df5-b7a0-8d5cefc75b7f
+uuid: 3a833cec-7c39-4181-8ba2-59c92b03ac9b
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.cta
-    - field.storage.block_content.field_cta_image
+    - field.storage.block_content.field_cta_i
   module:
     - image
-id: block_content.cta.field_cta_image
-field_name: field_cta_image
+id: block_content.cta.field_cta_i
+field_name: field_cta_i
 entity_type: block_content
 bundle: cta
 label: 'CTA image'
