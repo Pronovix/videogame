@@ -22,12 +22,13 @@
     <severity>0</severity>
   </rule>
 
+  <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
+
   <!-- Authored list of SlevomatCodingStandard rules based on https://github.com/slevomat/coding-standard/tree/5.0.0 -->
   <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
   <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.IncorrectWhitespaceBetweenOpenTagAndDeclare">
     <severity>0</severity>
   </rule>
-
   <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
     <!-- Defining the type of an array parameter or return type in a hook implementation's doc block should not be required. -->
     <exclude
