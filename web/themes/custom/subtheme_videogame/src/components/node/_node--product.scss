@@ -1,0 +1,26 @@
+// Custom style for the Product component.
+// -----------------------------------------------------------------------------
+.product {
+  &__title {
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    font-size: 3rem;
+    color: $gray-500;
+  }
+
+  &__body {
+    text-align: center;
+    background-color: $gray-700;
+    padding: 3rem;
+  }
+
+  &__field-image {
+    opacity: 0.3;
+  }
+
+  &__field-genres {
+    text-align: center;
+    background-color: $gray-700;
+  }
+}
