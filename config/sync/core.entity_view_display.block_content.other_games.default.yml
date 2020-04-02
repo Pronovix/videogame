@@ -1,0 +1,74 @@
+uuid: 7344b1f7-2441-455f-800d-c0e5487a86e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.other_games
+    - field.field.block_content.other_games.body
+    - field.field.block_content.other_games.field_image1
+    - field.field.block_content.other_games.field_image2
+    - field.field.block_content.other_games.field_image3
+    - field.field.block_content.other_games.field_image4
+    - field.field.block_content.other_games.field_image5
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.other_games.default
+targetEntityType: block_content
+bundle: other_games
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image1:
+    weight: 1
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image2:
+    weight: 2
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image3:
+    weight: 3
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image4:
+    weight: 4
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image5:
+    weight: 5
+    label: above
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

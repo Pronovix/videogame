@@ -1,38 +1,38 @@
-uuid: 3a833cec-7c39-4181-8ba2-59c92b03ac9b
+uuid: 8f680d0d-62da-4a08-a46b-96c00a1251f6
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.cta
-    - field.storage.block_content.field_cta_i
+    - block_content.type.other_games
+    - field.storage.block_content.field_image4
   module:
     - image
-id: block_content.cta.field_cta_i
-field_name: field_cta_i
+id: block_content.other_games.field_image4
+field_name: field_image4
 entity_type: block_content
-bundle: cta
-label: 'CTA image'
+bundle: other_games
+label: image4
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
-  max_resolution: ''
-  min_resolution: ''
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

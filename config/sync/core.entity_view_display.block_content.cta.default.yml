@@ -5,9 +5,7 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_cta_i
-    - field.field.block_content.cta.field_text1
-    - field.field.block_content.cta.field_text2
+    - field.field.block_content.cta.field_cta_image
   module:
     - image
     - text
@@ -19,11 +17,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_cta_i:
+  field_cta_image:
     weight: 0
     label: hidden
     settings:
@@ -31,19 +29,5 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
-  field_text1:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_text2:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
     region: content
 hidden: {  }

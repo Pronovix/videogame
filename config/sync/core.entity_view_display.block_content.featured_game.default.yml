@@ -1,28 +1,28 @@
-uuid: d2c87bd8-acdb-477e-a3ea-44776934b18a
+uuid: 9b1a813e-bb9f-441a-bcd1-3cb66a7475cd
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.heroshot
-    - field.field.block_content.heroshot.body
-    - field.field.block_content.heroshot.field_heroshot_image
+    - block_content.type.featured_game
+    - field.field.block_content.featured_game.body
+    - field.field.block_content.featured_game.field_featured_image
   module:
     - image
     - text
-id: block_content.heroshot.default
+id: block_content.featured_game.default
 targetEntityType: block_content
-bundle: heroshot
+bundle: featured_game
 mode: default
 content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_heroshot_image:
-    weight: 0
+  field_featured_image:
+    weight: 1
     label: hidden
     settings:
       image_style: ''

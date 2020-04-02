@@ -20,10 +20,12 @@
 
 {% if label_hidden %}
   {% if multiple %}
+    <div class="ldjl">
     <div{{ attributes.addClass(classes) }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
+    </div>
     </div>
   {% else %}
     {% for item in items %}

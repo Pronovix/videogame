@@ -1,9 +1,11 @@
-
-
 .heroshot {
-  &__field-su {
-    font-weight: bold;
-    margin-bottom: 3%;
+  &__body {
+    height: 90vh;
+    position: relative;
+    width: 80%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
   }
 
   &__image {
@@ -13,7 +15,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    height: 100vh;
+    height: 90vh;
     opacity: 0.5;
     overflow: hidden;
   }

@@ -1,27 +1,27 @@
-uuid: d2c87bd8-acdb-477e-a3ea-44776934b18a
+uuid: ff456a86-c513-4045-8c5f-823a09681ed2
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.heroshot
-    - field.field.block_content.heroshot.body
-    - field.field.block_content.heroshot.field_heroshot_image
+    - block_content.type.games_to_fight_the_day
+    - field.field.block_content.games_to_fight_the_day.body
+    - field.field.block_content.games_to_fight_the_day.field_fight_the_day_image
   module:
     - image
     - text
-id: block_content.heroshot.default
+id: block_content.games_to_fight_the_day.default
 targetEntityType: block_content
-bundle: heroshot
+bundle: games_to_fight_the_day
 mode: default
 content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_heroshot_image:
+  field_fight_the_day_image:
     weight: 0
     label: hidden
     settings:

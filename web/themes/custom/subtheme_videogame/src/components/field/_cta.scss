@@ -1,16 +1,19 @@
-
-
 .cta {
   &__body {
     text-align: center;
     position: relative;
+    height: 40vh;
+    width: 90%;
+    display: table-cell;
+    vertical-align: middle;
   }
 
-  &__i {
+  &__image {
     position: absolute;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.5;
     overflow: hidden;
-    height: 50vh;
+    height: 40vh;
+    filter: grayscale(100%);
   }
 }

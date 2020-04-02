@@ -1,10 +1,8 @@
 .companyinformation {
   text-align: center;
   margin: 0 10% 0% 10%;
-
-  &__name {
-    text-transform: uppercase;
-    color: $orange;
-    font-weight: bold;
-  }
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

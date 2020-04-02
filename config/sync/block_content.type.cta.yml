@@ -5,4 +5,4 @@ dependencies: {  }
 id: cta
 label: CTA
 revision: 0
-description: 'The CTA contains an image, two text fields and a button.'
+description: ''
