@@ -1,4 +1,4 @@
-uuid: 364b56a4-4ce4-4d6d-a845-f6305dfe36d7
+uuid: 6fa386cb-f2e2-46f2-956e-3dc5f3b42ba6
 langcode: en
 status: true
 dependencies:
@@ -9,11 +9,11 @@ id: node.product.field_genres
 field_name: field_genres
 entity_type: node
 bundle: product
-label: Genres
+label: genres
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: string_long
