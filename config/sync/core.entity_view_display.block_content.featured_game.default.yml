@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.featured_game
     - field.field.block_content.featured_game.body
+    - field.field.block_content.featured_game.field_featured_game
     - field.field.block_content.featured_game.field_featured_image
   module:
     - image
@@ -20,6 +21,13 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_featured_game:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_featured_image:
     weight: 1

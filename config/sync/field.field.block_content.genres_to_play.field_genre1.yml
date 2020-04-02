@@ -1,0 +1,21 @@
+uuid: 1e21a147-4165-40fa-9801-1ebde681bad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.storage.block_content.field_genre1
+  module:
+    - text
+id: block_content.genres_to_play.field_genre1
+field_name: field_genre1
+entity_type: block_content
+bundle: genres_to_play
+label: genre1
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

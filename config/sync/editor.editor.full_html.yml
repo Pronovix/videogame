@@ -55,7 +55,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: "h1.headline1|Headline 1\r\nh2.headline2|Headline 2\r\np.parbold|Paragraph bold\r\nspan.orangeupper|Orange uppercase text\r\nbutton.btn.btn-primary|Button primary"
+      styles: "h1.heading1|Heading 1\r\nh2.heading2|Heading 2\r\nh3.heading3|Heading 3\r\np.parbold|Paragraph bold\r\nspan.orangeupper|Orange uppercase text\r\nbutton.btn.btn-primary|Button primary\r\nbutton.btn.btn-secondary|Button secondary"
 image_upload:
   status: true
   scheme: public

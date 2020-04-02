@@ -1,0 +1,78 @@
+uuid: 515979b8-9680-42e5-9736-7fd4b311198c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.field.block_content.genres_to_play.body
+    - field.field.block_content.genres_to_play.field_genre1
+    - field.field.block_content.genres_to_play.field_genre2
+    - field.field.block_content.genres_to_play.field_genre3
+    - field.field.block_content.genres_to_play.field_genre4
+    - field.field.block_content.genres_to_play.field_genre5
+    - field.field.block_content.genres_to_play.field_genre6
+    - field.field.block_content.genres_to_play.field_genre7
+  module:
+    - text
+id: block_content.genres_to_play.default
+targetEntityType: block_content
+bundle: genres_to_play
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_genre1:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre2:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre3:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre4:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre5:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre6:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_genre7:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,50 @@
+.genres-to-play {
+  &__body {
+    margin-top: 5%;
+  }
+
+  &__field-genre1, &__field-genre2, &__field-genre3, &__field-genre4, &__field-genre5, &__field-genre6, &__field-genre7 {
+    width: 120px;
+    height: 120px;
+    background-color: $orange;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 8% 0 5%;
+  }
+
+  &__field-genre1 {
+    background-color: rgba($orange, 0.6);
+  }
+
+  &__field-genre2 {
+    background-color: rgba($orange, 0.7);
+  }
+
+  &__field-genre3 {
+    background-color: rgba($orange, 0.8);
+  }
+
+  &__field-genre5 {
+    background-color: rgba($orange, 0.8);
+  }
+
+  &__field-genre6 {
+    background-color: rgba($orange, 0.7);
+  }
+
+  &__field-genre7 {
+    background-color: rgba($orange, 0.6);
+  }
+}
+
+.genres_wrapper {
+  display: inline-block;
+  margin-bottom: 5%;
+
+  &:first-child {
+    display: block;
+    margin-bottom: 0;
+  }
+}

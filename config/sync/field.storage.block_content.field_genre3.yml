@@ -1,0 +1,20 @@
+uuid: 92f8d023-846b-4c38-81e5-7993b82e175e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_genre3
+field_name: field_genre3
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,17 +1,17 @@
-uuid: e9ed1180-0e53-4921-bd6d-019bbd4fb0fe
+uuid: 79062083-544c-4b36-ae83-6d9ad34f3351
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.other_games
-    - field.storage.block_content.field_image2
+    - field.storage.block_content.field_other_games_image
   module:
     - image
-id: block_content.other_games.field_image2
-field_name: field_image2
+id: block_content.other_games.field_other_games_image
+field_name: field_other_games_image
 entity_type: block_content
 bundle: other_games
-label: image2
+label: 'other games image'
 description: ''
 required: false
 translatable: false

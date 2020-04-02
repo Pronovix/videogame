@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.basic
     - block_content.type.company_information
     - block_content.type.cta
     - block_content.type.featured_game
     - block_content.type.games_to_fight_the_day
+    - block_content.type.genres_to_play
     - block_content.type.heroshot
+    - block_content.type.latest_products
     - block_content.type.other_games
     - field.field.node.front_page.body
     - node.type.front_page
@@ -117,6 +120,95 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
       -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Latest products title'
+        components:
+          898e1d21-dd5a-468f-b526-d2c809e1dc83:
+            uuid: 898e1d21-dd5a-468f-b526-d2c809e1dc83
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Latest products title'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 76
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'Latest products section'
+          column_widths: 33-34-33
+        components:
+          320258a8-3f81-4f19-bbf8-c27f221c797b:
+            uuid: 320258a8-3f81-4f19-bbf8-c27f221c797b
+            region: first
+            configuration:
+              id: 'inline_block:latest_products'
+              label: 'Ori and the Will of the Wisps'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 77
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          a33186ce-2dac-4bf4-b479-b67a869dcfac:
+            uuid: a33186ce-2dac-4bf4-b479-b67a869dcfac
+            region: second
+            configuration:
+              id: 'inline_block:latest_products'
+              label: 'Darksiders Genesis'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 78
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+          aacda7f9-8f03-43c5-a2d4-091e4f0a24de:
+            uuid: aacda7f9-8f03-43c5-a2d4-091e4f0a24de
+            region: third
+            configuration:
+              id: 'inline_block:latest_products'
+              label: 'Alien Isolation'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 79
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Other games section title'
+        components:
+          27919476-20e4-4376-909e-ec1e0b6610b7:
+            uuid: 27919476-20e4-4376-909e-ec1e0b6610b7
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Other games title'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 75
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
         layout_id: layout_fourcol_section
         layout_settings:
           label: 'Other games section'
@@ -154,7 +246,7 @@ third_party_settings:
             region: third
             configuration:
               id: 'inline_block:other_games'
-              label: 'Other games3'
+              label: 'Other games 3'
               provider: layout_builder
               label_display: '0'
               view_mode: full
@@ -168,11 +260,51 @@ third_party_settings:
             region: fourth
             configuration:
               id: 'inline_block:other_games'
-              label: 'Other games4'
+              label: 'Other games 4'
               provider: layout_builder
-              label_display: visible
+              label_display: '0'
               view_mode: full
               block_revision_id: 70
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Browse catalogue'
+        components:
+          4f883b6a-a423-4910-b056-8cb3d5f20e25:
+            uuid: 4f883b6a-a423-4910-b056-8cb3d5f20e25
+            region: content
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Browse catalogue'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 80
+              block_serialized: null
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Genres to play section'
+        components:
+          597bd077-768e-476f-95a8-a63d59775742:
+            uuid: 597bd077-768e-476f-95a8-a63d59775742
+            region: content
+            configuration:
+              id: 'inline_block:genres_to_play'
+              label: 'Genres to play'
+              provider: layout_builder
+              label_display: '0'
+              view_mode: full
+              block_revision_id: 81
               block_serialized: null
               context_mapping: {  }
             additional: {  }

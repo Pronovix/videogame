@@ -7,8 +7,7 @@
 {% set classes = [
   'companyinformation'
 ] %}
-<div class="companyinformation__wrapper">
-  {% for item in items %}
-    <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
-  {% endfor %}
-</div>
+
+{% for item in items %}
+  <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
+{% endfor %}

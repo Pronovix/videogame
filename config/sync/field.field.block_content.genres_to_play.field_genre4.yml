@@ -1,0 +1,21 @@
+uuid: b94e9466-894f-4fc2-a27c-bc1733133e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.storage.block_content.field_genre4
+  module:
+    - text
+id: block_content.genres_to_play.field_genre4
+field_name: field_genre4
+entity_type: block_content
+bundle: genres_to_play
+label: genre4
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

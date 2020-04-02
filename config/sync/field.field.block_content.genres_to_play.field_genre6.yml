@@ -1,0 +1,21 @@
+uuid: dd7d25b7-805e-4bd6-b26c-c1f442f8d177
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.storage.block_content.field_genre6
+  module:
+    - text
+id: block_content.genres_to_play.field_genre6
+field_name: field_genre6
+entity_type: block_content
+bundle: genres_to_play
+label: genre6
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

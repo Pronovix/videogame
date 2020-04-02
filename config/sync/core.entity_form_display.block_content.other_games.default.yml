@@ -5,11 +5,7 @@ dependencies:
   config:
     - block_content.type.other_games
     - field.field.block_content.other_games.body
-    - field.field.block_content.other_games.field_image1
-    - field.field.block_content.other_games.field_image2
-    - field.field.block_content.other_games.field_image3
-    - field.field.block_content.other_games.field_image4
-    - field.field.block_content.other_games.field_image5
+    - field.field.block_content.other_games.field_other_games_image
     - image.style.thumbnail
   module:
     - image
@@ -29,40 +25,8 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_image1:
+  field_other_games_image:
     weight: 27
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_image2:
-    weight: 28
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_image3:
-    weight: 29
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_image4:
-    weight: 30
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_image5:
-    weight: 31
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

@@ -1,17 +1,17 @@
-uuid: 8f680d0d-62da-4a08-a46b-96c00a1251f6
+uuid: 104ddae7-b271-4787-a661-057a94622c1e
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.other_games
-    - field.storage.block_content.field_image4
+    - block_content.type.latest_products
+    - field.storage.block_content.field_latest_product_image
   module:
     - image
-id: block_content.other_games.field_image4
-field_name: field_image4
+id: block_content.latest_products.field_latest_product_image
+field_name: field_latest_product_image
 entity_type: block_content
-bundle: other_games
-label: image4
+bundle: latest_products
+label: 'latest product image'
 description: ''
 required: false
 translatable: false
