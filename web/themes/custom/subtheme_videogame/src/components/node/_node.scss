@@ -1,30 +1,4 @@
 // Custom style for the Node component.
 // -----------------------------------------------------------------------------
-.field {
-  &--title {
-    position: absolute;
-    left: 35%;
-    top: 30%;
-    font-size: 3rem;
-    color: $gray-500;
-  }
 
-  &--image {
-    opacity: 0.3;
-  }
-
-  &--content {
-    text-align: center;
-    background-color: $gray-700;
-    padding: 3rem;
-
-  }
-
-  &--genres {
-    text-align: center;
-    background-color: $gray-700;
-  }
-}
-
-
-
+@import "./node--product";
