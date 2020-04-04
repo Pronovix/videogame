@@ -1,38 +1,38 @@
-uuid: 01ea4b70-11fc-4a35-940d-28ffbf552703
+uuid: 6b3eada5-f798-4d5e-b6af-3cc5c8e4a86c
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.heroshot
-    - field.storage.block_content.field_heroshot_image
+    - block_content.type.other_games
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.heroshot.field_heroshot_image
-field_name: field_heroshot_image
+id: block_content.other_games.field_image
+field_name: field_image
 entity_type: block_content
-bundle: heroshot
-label: 'Heroshot image'
+bundle: other_games
+label: image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
-  max_resolution: ''
-  min_resolution: ''
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

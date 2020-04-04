@@ -5,4 +5,4 @@ dependencies: {  }
 id: cta
 label: CTA
 revision: 0
-description: ''
+description: 'This is the call to action section of the website.'

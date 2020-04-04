@@ -5,8 +5,8 @@ dependencies:
   config:
     - block_content.type.featured_game
     - field.field.block_content.featured_game.body
-    - field.field.block_content.featured_game.field_featured_game
-    - field.field.block_content.featured_game.field_featured_image
+    - field.field.block_content.featured_game.field_image
+    - field.field.block_content.featured_game.field_title
     - image.style.thumbnail
   module:
     - image
@@ -26,21 +26,21 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_featured_game:
-    weight: 1
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_featured_image:
+  field_image:
     weight: 3
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   info:
     type: string_textfield

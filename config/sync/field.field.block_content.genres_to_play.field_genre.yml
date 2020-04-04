@@ -1,17 +1,17 @@
-uuid: 1e21a147-4165-40fa-9801-1ebde681bad6
+uuid: aa0f3404-813e-4e1f-82b3-f94b7ceeaa5c
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.genres_to_play
-    - field.storage.block_content.field_genre1
+    - field.storage.block_content.field_genre
   module:
     - text
-id: block_content.genres_to_play.field_genre1
-field_name: field_genre1
+id: block_content.genres_to_play.field_genre
+field_name: field_genre
 entity_type: block_content
 bundle: genres_to_play
-label: genre1
+label: genre
 description: ''
 required: false
 translatable: false

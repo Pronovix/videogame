@@ -1,4 +1,4 @@
-uuid: b236ed59-000f-4bc6-b822-da36f99a5a1e
+uuid: 42ff63fe-2e87-4eec-8841-89855ce88333
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - block_content
     - file
     - image
-id: block_content.field_other_games_image
-field_name: field_other_games_image
+id: block_content.field_image
+field_name: field_image
 entity_type: block_content
 type: image
 settings:

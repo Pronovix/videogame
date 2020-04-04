@@ -5,4 +5,4 @@ dependencies: {  }
 id: featured_game
 label: 'Featured game'
 revision: 0
-description: ''
+description: 'Featured game section.'

@@ -1,17 +1,17 @@
-uuid: a2b73449-8942-4e80-9011-53a805460192
+uuid: eebd719b-d67a-4dca-9d4c-afee076e27c5
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.featured_game
-    - field.storage.block_content.field_featured_game
+    - field.storage.block_content.field_title
   module:
     - text
-id: block_content.featured_game.field_featured_game
-field_name: field_featured_game
+id: block_content.featured_game.field_title
+field_name: field_title
 entity_type: block_content
 bundle: featured_game
-label: 'Featured games title'
+label: title
 description: ''
 required: false
 translatable: false

@@ -1,38 +1,38 @@
-uuid: 0e4dc6f4-4d35-4b36-bc77-705e2498ff60
+uuid: f3c79d86-dd70-461d-8e22-aedf103dc50a
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.cta
-    - field.storage.block_content.field_cta_image
+    - block_content.type.games_to_fight_the_day
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.cta.field_cta_image
-field_name: field_cta_image
+id: block_content.games_to_fight_the_day.field_image
+field_name: field_image
 entity_type: block_content
-bundle: cta
-label: 'CTA image'
+bundle: games_to_fight_the_day
+label: image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
-  max_resolution: ''
-  min_resolution: ''
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

@@ -5,4 +5,4 @@ dependencies: {  }
 id: other_games
 label: 'Other games'
 revision: 0
-description: ''
+description: 'Section for some other games.'

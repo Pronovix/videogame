@@ -5,4 +5,4 @@ dependencies: {  }
 id: latest_products
 label: 'Latest products'
 revision: 0
-description: ''
+description: 'Section for the latest three products of Playland.'

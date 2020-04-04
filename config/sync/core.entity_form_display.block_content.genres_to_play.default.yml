@@ -5,13 +5,7 @@ dependencies:
   config:
     - block_content.type.genres_to_play
     - field.field.block_content.genres_to_play.body
-    - field.field.block_content.genres_to_play.field_genre1
-    - field.field.block_content.genres_to_play.field_genre2
-    - field.field.block_content.genres_to_play.field_genre3
-    - field.field.block_content.genres_to_play.field_genre4
-    - field.field.block_content.genres_to_play.field_genre5
-    - field.field.block_content.genres_to_play.field_genre6
-    - field.field.block_content.genres_to_play.field_genre7
+    - field.field.block_content.genres_to_play.field_genre
   module:
     - text
 id: block_content.genres_to_play.default
@@ -29,56 +23,8 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_genre1:
+  field_genre:
     weight: 27
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre2:
-    weight: 28
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre3:
-    weight: 29
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre4:
-    weight: 30
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre5:
-    weight: 31
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre6:
-    weight: 32
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_genre7:
-    weight: 33
     settings:
       size: 60
       placeholder: ''

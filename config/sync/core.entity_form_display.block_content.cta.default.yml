@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_cta_image
+    - field.field.block_content.cta.field_image
     - image.style.thumbnail
   module:
     - image
@@ -25,8 +25,8 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_cta_image:
-    weight: 26
+  field_image:
+    weight: 27
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

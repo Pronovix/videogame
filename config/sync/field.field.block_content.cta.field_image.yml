@@ -1,17 +1,17 @@
-uuid: b0ad1903-be39-41fb-8e16-620adc8e4a81
+uuid: 510e1a0e-f471-4a34-ba68-93dbb183ce17
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.games_to_fight_the_day
-    - field.storage.block_content.field_fight_the_day_image
+    - block_content.type.cta
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.games_to_fight_the_day.field_fight_the_day_image
-field_name: field_fight_the_day_image
+id: block_content.cta.field_image
+field_name: field_image
 entity_type: block_content
-bundle: games_to_fight_the_day
-label: 'Fight the day image'
+bundle: cta
+label: image
 description: ''
 required: false
 translatable: false

@@ -1,20 +1,20 @@
-uuid: 104ddae7-b271-4787-a661-057a94622c1e
+uuid: 9f107a0b-b4f1-493f-9557-5546f1db3a7e
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.latest_products
-    - field.storage.block_content.field_latest_product_image
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.latest_products.field_latest_product_image
-field_name: field_latest_product_image
+id: block_content.latest_products.field_image
+field_name: field_image
 entity_type: block_content
 bundle: latest_products
-label: 'latest product image'
+label: image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

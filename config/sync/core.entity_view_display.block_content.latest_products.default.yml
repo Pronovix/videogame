@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.latest_products
     - field.field.block_content.latest_products.body
-    - field.field.block_content.latest_products.field_latest_product_image
+    - field.field.block_content.latest_products.field_image
     - image.style.product_image_style
   module:
     - image
@@ -18,11 +18,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_latest_product_image:
+  field_image:
     weight: 0
     label: hidden
     settings:

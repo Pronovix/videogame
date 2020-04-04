@@ -1,17 +1,16 @@
 .heroshot {
   &__body {
     height: 90vh;
-    position: relative;
-    width: 80%;
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  &__image {
+  &__field-image {
     position: absolute;
     z-index: -1;
-    height: 90vh;
     opacity: 0.5;
     overflow: hidden;
+    height: 90vh;
   }
 }

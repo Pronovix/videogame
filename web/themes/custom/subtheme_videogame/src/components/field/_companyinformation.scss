@@ -1,3 +1,12 @@
-.companyinformation {
-  margin: 5% 10% 5% 10%;
+.company-information {
+  &__body {
+    margin: 4rem 0 4rem 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    p {
+      margin: 0rem 4rem 0rem 4rem;
+    }
+  }
 }

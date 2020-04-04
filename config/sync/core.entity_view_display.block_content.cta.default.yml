@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_cta_image
+    - field.field.block_content.cta.field_image
   module:
     - image
     - text
@@ -17,12 +17,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_cta_image:
-    weight: 0
+  field_image:
+    weight: 1
     label: hidden
     settings:
       image_style: ''

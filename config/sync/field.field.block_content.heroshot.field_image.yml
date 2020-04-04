@@ -1,38 +1,38 @@
-uuid: 8b7b700f-fb16-4331-9fa5-9fb6c14dcf75
+uuid: ef39ec25-d84c-4cef-866d-34f961158e08
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.featured_game
-    - field.storage.block_content.field_featured_image
+    - block_content.type.heroshot
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.featured_game.field_featured_image
-field_name: field_featured_image
+id: block_content.heroshot.field_image
+field_name: field_image
 entity_type: block_content
-bundle: featured_game
-label: 'Featured image'
+bundle: heroshot
+label: image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
   alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
-  max_resolution: ''
-  min_resolution: ''
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
   handler: 'default:file'
   handler_settings: {  }
 field_type: image

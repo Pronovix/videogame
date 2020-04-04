@@ -1,20 +1,20 @@
-uuid: 79062083-544c-4b36-ae83-6d9ad34f3351
+uuid: baa974f6-1cc1-4c7f-9145-4c7d461643ec
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.other_games
-    - field.storage.block_content.field_other_games_image
+    - block_content.type.featured_game
+    - field.storage.block_content.field_image
   module:
     - image
-id: block_content.other_games.field_other_games_image
-field_name: field_other_games_image
+id: block_content.featured_game.field_image
+field_name: field_image
 entity_type: block_content
-bundle: other_games
-label: 'other games image'
+bundle: featured_game
+label: image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

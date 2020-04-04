@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.games_to_fight_the_day
     - field.field.block_content.games_to_fight_the_day.body
-    - field.field.block_content.games_to_fight_the_day.field_fight_the_day_image
+    - field.field.block_content.games_to_fight_the_day.field_image
   module:
     - image
     - text
@@ -17,11 +17,11 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_fight_the_day_image:
+  field_image:
     weight: 0
     label: hidden
     settings:

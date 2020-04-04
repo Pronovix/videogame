@@ -5,4 +5,4 @@ dependencies: {  }
 id: genres_to_play
 label: 'Genres to play'
 revision: 0
-description: ''
+description: 'Available genres on the website.'

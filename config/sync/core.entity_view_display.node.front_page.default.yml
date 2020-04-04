@@ -95,7 +95,7 @@ third_party_settings:
             region: second
             configuration:
               id: 'inline_block:games_to_fight_the_day'
-              label: Coronavirus
+              label: 'The Walking Dead'
               provider: layout_builder
               label_display: '0'
               view_mode: full
@@ -109,7 +109,7 @@ third_party_settings:
             region: first
             configuration:
               id: 'inline_block:games_to_fight_the_day'
-              label: 'Games to fight the day'
+              label: Coronavirus
               provider: layout_builder
               label_display: '0'
               view_mode: full

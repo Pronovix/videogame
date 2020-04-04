@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.other_games
     - field.field.block_content.other_games.body
-    - field.field.block_content.other_games.field_other_games_image
+    - field.field.block_content.other_games.field_image
     - image.style.other_games_image_style
   module:
     - image
@@ -22,7 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_other_games_image:
+  field_image:
     weight: 0
     label: hidden
     settings:

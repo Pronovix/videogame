@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.other_games
     - field.field.block_content.other_games.body
-    - field.field.block_content.other_games.field_other_games_image
+    - field.field.block_content.other_games.field_image
     - image.style.thumbnail
   module:
     - image
@@ -25,8 +25,8 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_other_games_image:
-    weight: 27
+  field_image:
+    weight: 28
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
