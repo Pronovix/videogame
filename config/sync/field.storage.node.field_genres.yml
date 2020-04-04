@@ -1,4 +1,4 @@
-uuid: fcf639af-bb1c-4e74-bc68-7769ed1cd819
+uuid: 32fc87e4-2dd0-4680-8aa4-a2e0d8ec35d6
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,8 @@ dependencies:
 id: node.field_genres
 field_name: field_genres
 entity_type: node
-type: string
+type: string_long
 settings:
-  max_length: 255
-  is_ascii: false
   case_sensitive: false
 module: core
 locked: false
