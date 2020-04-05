@@ -1,10 +1,10 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Drupal\user_timezone\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Form\FormBuilderInterface;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -21,9 +21,9 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
   /**
    * The form builder.
    *
-   * @var FormBuilderInterface
+   * @var \Drupal\user_timezone\UserTimezoneSalutation
    */
-  protected $formBuilder;
+  protected $salutation;
 
   /**
    * {@inheritdoc}
@@ -41,8 +41,13 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function build() {
-    return $this->salutation->getSalutation ('\Drupal\user_timezone\UserTimezoneSalutation');
+    return [
+      '#markup' => $this->salutation->getSalutation('\Drupal\user_timezone\UserTimezoneSalutation'),
+    ];
   }
 
 }
