@@ -1,0 +1,7 @@
+user_timezone.content:
+  path: '/user'
+  defaults:
+    _controller: '\Drupal\user_timezone\Controller\UserTimezoneController::content'
+    _title: 'User timezone'
+  requirements:
+    _permission: 'access content'
