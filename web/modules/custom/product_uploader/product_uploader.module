@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains hook for Product Uploader module.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ *Implements hook_form_alter()
+ */
+function product_uploader_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $a=1;
+}

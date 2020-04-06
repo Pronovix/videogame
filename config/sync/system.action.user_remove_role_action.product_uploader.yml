@@ -1,0 +1,14 @@
+uuid: 8bdfdff1-04db-4f3d-b9e9-0330d230ccef
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.product_uploader
+  module:
+    - user
+id: user_remove_role_action.product_uploader
+label: 'Remove the Product uploader role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: product_uploader
