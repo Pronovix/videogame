@@ -7,8 +7,9 @@
   &__body {
     position: relative;
     text-align: left;
-    width: 50%;
-    margin: 0 0 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 6rem 1rem 1rem;
   }
 
   &__field-image {

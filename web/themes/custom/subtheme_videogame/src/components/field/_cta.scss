@@ -1,17 +1,21 @@
 .cta {
   &__body {
-    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 3rem;
+    padding: 3rem 0 3rem 0;
+
+    p:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__field-image {
+    margin-top: 3rem;
     position: absolute;
     z-index: -1;
     opacity: 0.5;
-    overflow: hidden;
-    height: 40vh;
   }
 }

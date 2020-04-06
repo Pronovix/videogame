@@ -9,8 +9,8 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
 }
+
 .field__item {
   display: flex;
   align-items: center;
@@ -33,16 +33,5 @@
 
   &:nth-of-type(4) {
     background-color: $orange;
-  }
-}
-
-.genres_wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-
-  &:first-child {
-    display: block;
-    margin-bottom: 0;
   }
 }

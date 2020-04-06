@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^1.2",
+        "drupal/config_ignore": "^2.2",
         "drupal/config_installer": "^1.8",
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
