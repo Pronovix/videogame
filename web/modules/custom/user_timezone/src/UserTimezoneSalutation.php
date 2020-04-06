@@ -4,15 +4,14 @@ declare(strict_types = 1);
 
 namespace Drupal\user_timezone;
 
-use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Prepares user greeting.
  */
-class UserTimezoneSalutation extends ControllerBase {
+class UserTimezoneSalutation{
   use StringTranslationTrait;
 
   /**
@@ -25,7 +24,7 @@ class UserTimezoneSalutation extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function __construct(AccountInterface $currentUser) {
+  public function __construct(AccountProxyInterface $currentUser) {
     $this->currentUser = $currentUser;
   }
 
@@ -42,18 +41,24 @@ class UserTimezoneSalutation extends ControllerBase {
    * {@inheritdoc}
    */
   public function getSalutation() {
-    $time = date('G', \Drupal::time()->getRequestTime());
+    $time = (int) date('G', \Drupal::time()->getRequestTime());
 
-    if ((int) $time->format('G') >= 06 && (int) $time->format('G') < 12) {
-      return $this->t('Good morning ') . $this->currentUser;
+    if ((int) $time >= 06 && (int) $time < 12) {
+      return $this->t('Good morning %username', [
+        '%username' => $this->currentUser->getAccountName(),
+        ]);
     }
 
-    if ((int) $time->format('G') >= 12 && (int) $time->format('G') < 18) {
-      return $this->t('Good afternoon ') . $this->currentUser;
+    if ((int) $time >= 12 && (int) $time < 18) {
+      return $this->t('Good afternoon %username', [
+        '%username' => $this->currentUser->getAccountName(),
+        ]);
     }
 
-    if ((int) $time->format('G') >= 18) {
-      return $this->t('Good evening ') . $this->currentUser;
+    if ((int) $time >= 18) {
+      return $this->t('Good evening %username', [
+        '%username' => $this->currentUser->getAccountName(),
+        ]);
     }
   }
 
