@@ -7,9 +7,8 @@
     text-shadow: 0.05rem 0.05rem $orange;
     font-size: 1.2rem;
   }
-}
 
-.views-field-field-image img {
-  opacity: 0.45;
-
+  &__image {
+    opacity: 0.45;
+  }
 }
