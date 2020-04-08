@@ -60,7 +60,7 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
    */
   public function build() {
     $build = [];
-    $build ['#cache']['max-age'] = 0;
+    $build['#cache']['max-age'] = 0;
 
     return [
       '#markup' => $this->salutation->getSalutation(),

@@ -26,7 +26,7 @@ class UserTimezoneSalutation {
   /**
    * The string to translation.
    *
-   * @var Drupal\Coore\String\Stringtranslation\TranslationInterface
+   * @var \Drupal\Core\StringTranslation\StringTranslationTrait
    */
   protected $stringTranslation;
 
@@ -52,16 +52,16 @@ class UserTimezoneSalutation {
    * {@inheritdoc}
    */
   public function getSalutation() {
-    $time =  (int) date('G', $this->time->getRequestTime());
+    $time = (int) date('G', $this->time->getRequestTime());
 
     if ($time >= 06 && $time < 12) {
-      $salutation = $this->t(' Good morning, %username!', [
+      $salutation = $this->t('Good morning, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
     elseif ($time >= 12 && $time < 18) {
-      $salutation = $this->t(' Good afternoon, %username!', [
+      $salutation = $this->t('Good afternoon, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
@@ -73,7 +73,7 @@ class UserTimezoneSalutation {
     }
 
     else {
-    $salutation = $this->t(' Good night, %username!', [
+      $salutation = $this->t('Good night, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
