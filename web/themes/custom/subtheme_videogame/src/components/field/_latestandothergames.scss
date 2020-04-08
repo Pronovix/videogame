@@ -1,8 +1,13 @@
 .other-games, .latest-products {
+  &__body {
+    text-align: center;
+  }
+
   &__field-image, &__field-image {
     margin: 0.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 }
