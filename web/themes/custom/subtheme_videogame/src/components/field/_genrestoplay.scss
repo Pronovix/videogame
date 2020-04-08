@@ -1,7 +1,6 @@
 .genres-to-play {
   &__body {
     margin-top: 3rem;
-    text-align: center;
   }
 
   &__field-genre {
@@ -20,7 +19,7 @@
   width: 120px;
   height: 120px;
 
-  &:nth-child(7n+1),  &:nth-child(7n+7)  {
+  &:nth-child(7n+1), &:nth-child(7n+7) {
     background-color: rgba($orange, 0.7);
   }
 

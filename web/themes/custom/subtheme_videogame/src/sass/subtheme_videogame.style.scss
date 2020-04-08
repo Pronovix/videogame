@@ -1,6 +1,5 @@
 // Bootstrap
 // -----------------------------------------------------------------------------
-
 @import "~bootstrap/scss/functions";
 @import "base/colors";
 @import "base/variables";
@@ -56,6 +55,7 @@
 // -----------------------------------------------------------------------------
 @import "../components/node/node";
 @import "../components/navbar/navbar";
+@import "../components/field/common";
 @import "../components/field/heroshot";
 @import "../components/field/companyinformation";
 @import "../components/field/cta";
