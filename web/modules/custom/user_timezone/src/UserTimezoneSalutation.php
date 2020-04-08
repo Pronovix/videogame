@@ -7,6 +7,7 @@ namespace Drupal\user_timezone;
 use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -23,11 +24,19 @@ class UserTimezoneSalutation {
   protected $currentUser;
 
   /**
+   * The string to translation.
+   *
+   * @var Drupal\Coore\String\Stringtranslation\TranslationInterface
+   */
+  protected $stringTranslation;
+
+  /**
    * {@inheritdoc}
    */
-  public function __construct(AccountProxyInterface $currentUser, TimeInterface $time) {
+  public function __construct(AccountProxyInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
     $this->currentUser = $currentUser;
     $this->time = $time;
+    $this->stringTranslation = $stringTranslation;
   }
 
   /**
@@ -43,25 +52,33 @@ class UserTimezoneSalutation {
    * {@inheritdoc}
    */
   public function getSalutation() {
-    $time = $this->time->getRequestTime();
+    $time =  (int) date('G', $this->time->getRequestTime());
 
-    if ($time >= 06 && (int) $time < 12) {
-      return $this->t('Good morning %username', [
+    if ($time >= 06 && $time < 12) {
+      $salutation = $this->t(' Good morning, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
-    if ($time >= 12 && (int) $time < 18) {
-      return $this->t('Good afternoon %username', [
+    elseif ($time >= 12 && $time < 18) {
+      $salutation = $this->t(' Good afternoon, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
-    if ($time >= 18) {
-      return $this->t('Good evening %username', [
+    elseif ($time >= 18 && $time < 24) {
+      $salutation = $this->t('Good evening, %username!', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
+
+    else {
+    $salutation = $this->t(' Good night, %username!', [
+        '%username' => $this->currentUser->getAccountName(),
+      ]);
+    }
+
+    return implode('', [$salutation]);
   }
 
 }
