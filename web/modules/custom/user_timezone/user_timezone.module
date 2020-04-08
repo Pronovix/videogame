@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+/**
+ * Implements hook_cron().
+ */
+function user_timezone_cron() {
+  \Drupal\Core\Cache\Cache::invalidateTags(['user_timezone']);
+}

@@ -24,13 +24,6 @@ class UserTimezoneSalutation {
   protected $currentUser;
 
   /**
-   * The string to translation.
-   *
-   * @var \Drupal\Core\StringTranslation\StringTranslationTrait
-   */
-  protected $stringTranslation;
-
-  /**
    * {@inheritdoc}
    */
   public function __construct(AccountProxyInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
@@ -78,7 +71,7 @@ class UserTimezoneSalutation {
       ]);
     }
 
-    return implode('', [$salutation]);
+    return $salutation;
   }
 
 }

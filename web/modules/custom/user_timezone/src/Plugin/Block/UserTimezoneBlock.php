@@ -61,9 +61,10 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
   public function build() {
     $build = [];
     $build['#cache']['max-age'] = 0;
+    $build['#cache']['tags'] = 'user_timezone';
 
     return [
-      '#markup' => $this->salutation->getSalutation(),
+      '#markup' => $this->salutation->getSalutation()->render(),
     ];
   }
 
