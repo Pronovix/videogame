@@ -9,9 +9,9 @@ id: node.product.field_genres
 field_name: field_genres
 entity_type: node
 bundle: product
-label: genres
+label: Genres
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

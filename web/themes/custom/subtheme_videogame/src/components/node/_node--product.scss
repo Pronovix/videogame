@@ -2,9 +2,9 @@
 // -----------------------------------------------------------------------------
 .product {
   &__title {
-    position: absolute;
-    left: 35%;
-    top: 30%;
+    position: relative;
+    left: 23rem;
+    top: 23rem;
     font-size: 3rem;
     color: $gray-500;
   }
