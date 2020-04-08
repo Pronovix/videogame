@@ -5,10 +5,10 @@ dependencies:
   config:
     - block_content.type.heroshot
     - field.field.block_content.heroshot.body
-    - field.field.block_content.heroshot.field_image
+    - field.field.block_content.heroshot.field_background_image
     - image.style.thumbnail
   module:
-    - image
+    - bg_img_field
     - text
 id: block_content.heroshot.default
 targetEntityType: block_content
@@ -25,13 +25,19 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_image:
-    weight: 26
+  field_background_image:
+    weight: 27
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      css_settings:
+        css_selector: ''
+        css_repeat: inherit
+        css_background_size: inherit
+        css_background_position: inherit
+      hide_css_settings: false
     third_party_settings: {  }
-    type: image_image
+    type: bg_img_field_widget
     region: content
   info:
     type: string_textfield

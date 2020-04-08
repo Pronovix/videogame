@@ -5,26 +5,17 @@
   }
 
   &__body {
-    position: relative;
     text-align: left;
     display: flex;
     flex-direction: column;
-    margin: 2rem 6rem 1rem 1rem;
-  }
-
-  &__field-image {
-    position: absolute;
-    z-index: -1;
-    opacity: 0.8;
-    overflow: hidden;
-    outline: 0.031rem solid $black;
+    padding: 2rem 6rem 1rem 1rem;
   }
 }
 
 .games-to-fight-the-day {
   &__body {
     background: $sanjuan;
-    padding: 0.3rem 1rem 0.2rem 1rem;
+    padding: 0.3rem 1rem 0.2rem;
     outline: 0.031rem solid $black;
     margin-bottom: 2.5rem;
   }

@@ -5,11 +5,11 @@ dependencies:
   config:
     - block_content.type.featured_game
     - field.field.block_content.featured_game.body
-    - field.field.block_content.featured_game.field_image
+    - field.field.block_content.featured_game.field_background_image
     - field.field.block_content.featured_game.field_title
     - image.style.thumbnail
   module:
-    - image
+    - bg_img_field
     - text
 id: block_content.featured_game.default
 targetEntityType: block_content
@@ -26,13 +26,19 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_image:
-    weight: 3
+  field_background_image:
+    weight: 26
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      css_settings:
+        css_selector: ''
+        css_repeat: inherit
+        css_background_size: inherit
+        css_background_position: inherit
+      hide_css_settings: false
     third_party_settings: {  }
-    type: image_image
+    type: bg_img_field_widget
     region: content
   field_title:
     weight: 1

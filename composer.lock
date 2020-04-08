@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57fec3d25e9d20ef3249e702101bb5ae",
+    "content-hash": "002649d946b09dea188b6b8b8d21857a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1549,6 +1549,62 @@
                 "php"
             ],
             "time": "2019-06-08T11:03:04+00:00"
+        },
+        {
+            "name": "drupal/bg_img_field",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bg_img_field.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bg_img_field-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "e07ef1adab8df6b02fa5bdc18b88cedc71bfc855"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/token": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1585790351",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JFortune",
+                    "homepage": "https://www.drupal.org/user/3454003"
+                },
+                {
+                    "name": "aisforaaron",
+                    "homepage": "https://www.drupal.org/user/116113"
+                },
+                {
+                    "name": "cchoe1",
+                    "homepage": "https://www.drupal.org/user/3562129"
+                }
+            ],
+            "description": "Allows you to add responsive background images based on selctors.",
+            "homepage": "https://www.drupal.org/project/bg_img_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/bg_img_field"
+            }
         },
         {
             "name": "drupal/components",

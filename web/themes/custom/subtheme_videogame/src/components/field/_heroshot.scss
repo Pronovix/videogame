@@ -3,13 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 8rem 0 8rem 0;
-    background-image: url("../../img/heroimage.jpg");
-  }
-
-  &__field-image {
-    position: absolute;
-    z-index: -1;
-    opacity: 0.5;
+    padding: 8rem 0;
   }
 }

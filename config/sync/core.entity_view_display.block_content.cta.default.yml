@@ -5,9 +5,10 @@ dependencies:
   config:
     - block_content.type.cta
     - field.field.block_content.cta.body
-    - field.field.block_content.cta.field_image
+    - field.field.block_content.cta.field_background_image
+    - responsive_image.styles.custom_wide
   module:
-    - image
+    - bg_img_field
     - text
 id: block_content.cta.default
 targetEntityType: block_content
@@ -21,13 +22,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_image:
-    weight: 1
+  field_background_image:
+    weight: 3
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: custom_wide
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: bg_img_field_formatter
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
