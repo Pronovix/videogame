@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * This file stops cache for anonymous users.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Implements hook_cron().
+ */
+function user_timezone_cron(): void {
+  Cache::invalidateTags(['user_timezone']);
+}

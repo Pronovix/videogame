@@ -1,0 +1,4 @@
+services:
+  user_timezone.salutation:
+    class: Drupal\user_timezone\UserTimezoneSalutation
+    arguments: ['@current_user', '@datetime.time', '@string_translation']
