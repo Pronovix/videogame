@@ -1,0 +1,8 @@
+uuid: 4bcbd409-ebc7-47dd-80db-e177ad41b569
+langcode: en
+status: true
+dependencies: {  }
+id: latest_products
+label: 'Latest products'
+revision: 0
+description: 'Section for the latest three products of Playland.'

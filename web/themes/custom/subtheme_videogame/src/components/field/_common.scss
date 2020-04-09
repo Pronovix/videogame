@@ -1,0 +1,23 @@
+.company-information, .other-games, .latest-products {
+  &__body, &__field-image {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.cta, .heroshot {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.genres-to-play, .games-to-fight-the-day {
+  &__body {
+    text-align: center;
+  }
+}

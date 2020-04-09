@@ -1,0 +1,35 @@
+.btn {
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: #FCFEFF;
+
+  &:active {
+    color: $sanjuan;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    color: $white;
+  }
+}
+
+.btn-secondary {
+  color: $orange;
+
+  &:active {
+    color: $white;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    color: $yellow;
+  }
+}

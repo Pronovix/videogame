@@ -1,0 +1,26 @@
+.featured-game {
+  &__field-title {
+    background-color: $sanjuan;
+    padding-bottom: 0.063rem;
+  }
+
+  &__body {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 6rem 1rem 1rem;
+  }
+}
+
+.games-to-fight-the-day {
+  &__body {
+    background: $sanjuan;
+    padding: 0.3rem 1rem 0.2rem;
+    outline: 0.031rem solid $black;
+    margin-bottom: 2.5rem;
+  }
+
+  &__field-image {
+    outline: 0.031rem solid $black;
+  }
+}

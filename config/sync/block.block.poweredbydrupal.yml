@@ -1,4 +1,4 @@
-uuid: d905ce8e-aa55-472b-b28e-985e650f29bc
+uuid: 22459bb1-eb28-4af0-9469-efe5ec99dbbe
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - subtheme_videogame
-_core:
-  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
-id: subtheme_videogame_powered
+id: poweredbydrupal
 theme: subtheme_videogame
 region: footer
-weight: -10
+weight: 0
 provider: null
 plugin: system_powered_by_block
 settings:

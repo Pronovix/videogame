@@ -1,0 +1,59 @@
+uuid: 100187dc-5899-4404-9fb1-eb18bf0f4373
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_game
+    - field.field.block_content.featured_game.body
+    - field.field.block_content.featured_game.field_background_image
+    - field.field.block_content.featured_game.field_title
+    - image.style.thumbnail
+  module:
+    - bg_img_field
+    - text
+id: block_content.featured_game.default
+targetEntityType: block_content
+bundle: featured_game
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_background_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      css_settings:
+        css_selector: ''
+        css_repeat: inherit
+        css_background_size: inherit
+        css_background_position: inherit
+      hide_css_settings: false
+    third_party_settings: {  }
+    type: bg_img_field_widget
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
