@@ -3,16 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.basic
-    - block_content.type.company_information
-    - block_content.type.cta
-    - block_content.type.featured_game
-    - block_content.type.games_to_fight_the_day
-    - block_content.type.genres_to_play
-    - block_content.type.heroshot
-    - block_content.type.latest_products
-    - block_content.type.other_games
     - field.field.node.front_page.body
+    - field.field.node.front_page.layout_builder__layout
     - node.type.front_page
   module:
     - layout_builder
@@ -21,314 +13,76 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
+    allow_custom: true
     enabled: true
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Heroshot section'
-        components:
-          c46be19e-f5db-4ad9-a5d1-91daba8bf253:
-            uuid: c46be19e-f5db-4ad9-a5d1-91daba8bf253
-            region: content
-            configuration:
-              id: 'inline_block:heroshot'
-              label: Heroshot
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 61
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Company information section'
-        components:
-          e53113a5-5faa-4c8d-a9fd-68c7472d7c9d:
-            uuid: e53113a5-5faa-4c8d-a9fd-68c7472d7c9d
-            region: content
-            configuration:
-              id: 'inline_block:company_information'
-              label: 'Company information'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 64
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Featured games'
-        components:
-          79c2f17a-09a6-4abc-a433-35f45ab82ab1:
-            uuid: 79c2f17a-09a6-4abc-a433-35f45ab82ab1
-            region: content
-            configuration:
-              id: 'inline_block:featured_game'
-              label: 'Featured games'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 74
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_twocol_section
         layout_settings:
           label: 'Fight the day'
           column_widths: 50-50
-        components:
-          c8ca41eb-24fe-4256-877e-01bd63dfb0b8:
-            uuid: c8ca41eb-24fe-4256-877e-01bd63dfb0b8
-            region: second
-            configuration:
-              id: 'inline_block:games_to_fight_the_day'
-              label: 'The Walking Dead'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 73
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          3c8ef105-7253-4ab9-83e8-7f7659c9a5a9:
-            uuid: 3c8ef105-7253-4ab9-83e8-7f7659c9a5a9
-            region: first
-            configuration:
-              id: 'inline_block:games_to_fight_the_day'
-              label: Coronavirus
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 72
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Latest products title'
-        components:
-          898e1d21-dd5a-468f-b526-d2c809e1dc83:
-            uuid: 898e1d21-dd5a-468f-b526-d2c809e1dc83
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Latest products title'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 76
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_threecol_section
         layout_settings:
           label: 'Latest products section'
           column_widths: 33-34-33
-        components:
-          320258a8-3f81-4f19-bbf8-c27f221c797b:
-            uuid: 320258a8-3f81-4f19-bbf8-c27f221c797b
-            region: first
-            configuration:
-              id: 'inline_block:latest_products'
-              label: 'Ori and the Will of the Wisps'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 77
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          a33186ce-2dac-4bf4-b479-b67a869dcfac:
-            uuid: a33186ce-2dac-4bf4-b479-b67a869dcfac
-            region: second
-            configuration:
-              id: 'inline_block:latest_products'
-              label: 'Darksiders Genesis'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 78
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          aacda7f9-8f03-43c5-a2d4-091e4f0a24de:
-            uuid: aacda7f9-8f03-43c5-a2d4-091e4f0a24de
-            region: third
-            configuration:
-              id: 'inline_block:latest_products'
-              label: 'Alien Isolation'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 79
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Other games section title'
-        components:
-          27919476-20e4-4376-909e-ec1e0b6610b7:
-            uuid: 27919476-20e4-4376-909e-ec1e0b6610b7
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Other games title'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 75
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_fourcol_section
         layout_settings:
           label: 'Other games section'
-        components:
-          8d52251e-d3aa-406a-9e3d-013bb96cb37d:
-            uuid: 8d52251e-d3aa-406a-9e3d-013bb96cb37d
-            region: first
-            configuration:
-              id: 'inline_block:other_games'
-              label: 'Other games1'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 67
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          c6933ef0-14ca-4348-a8c9-0413f96dab2e:
-            uuid: c6933ef0-14ca-4348-a8c9-0413f96dab2e
-            region: second
-            configuration:
-              id: 'inline_block:other_games'
-              label: 'Other games2'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 68
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          a78aa05b-e9db-4ecb-8ffc-2e43a8abc012:
-            uuid: a78aa05b-e9db-4ecb-8ffc-2e43a8abc012
-            region: third
-            configuration:
-              id: 'inline_block:other_games'
-              label: 'Other games 3'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 69
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          17cc1409-ee5b-474f-9a64-49f9bfc77f01:
-            uuid: 17cc1409-ee5b-474f-9a64-49f9bfc77f01
-            region: fourth
-            configuration:
-              id: 'inline_block:other_games'
-              label: 'Other games 4'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 70
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Browse catalogue'
-        components:
-          4f883b6a-a423-4910-b056-8cb3d5f20e25:
-            uuid: 4f883b6a-a423-4910-b056-8cb3d5f20e25
-            region: content
-            configuration:
-              id: 'inline_block:basic'
-              label: 'Browse catalogue'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 80
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'Genres to play section'
-        components:
-          597bd077-768e-476f-95a8-a63d59775742:
-            uuid: 597bd077-768e-476f-95a8-a63d59775742
-            region: content
-            configuration:
-              id: 'inline_block:genres_to_play'
-              label: 'Genres to play'
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 81
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
         layout_settings:
           label: 'CTA section'
-        components:
-          f79ffca9-3007-4522-bcd2-b56e736a54e0:
-            uuid: f79ffca9-3007-4522-bcd2-b56e736a54e0
-            region: content
-            configuration:
-              id: 'inline_block:cta'
-              label: CTA
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 63
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
+        components: {  }
         third_party_settings: {  }
 id: node.front_page.default
 targetEntityType: node
