@@ -1,0 +1,23 @@
+uuid: 37b7611c-6d19-4243-a380-1c2224ba6934
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heroshot
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.heroshot.body
+field_name: body
+entity_type: block_content
+bundle: heroshot
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

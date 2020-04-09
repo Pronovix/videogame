@@ -1,0 +1,8 @@
+uuid: 0c5b14e2-42e4-48f2-93b8-390b058249a9
+langcode: en
+status: true
+dependencies: {  }
+id: featured_game
+label: 'Featured game'
+revision: 0
+description: 'Featured game section.'

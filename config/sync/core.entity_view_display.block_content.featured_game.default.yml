@@ -1,0 +1,43 @@
+uuid: 9b1a813e-bb9f-441a-bcd1-3cb66a7475cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_game
+    - field.field.block_content.featured_game.body
+    - field.field.block_content.featured_game.field_background_image
+    - field.field.block_content.featured_game.field_title
+    - responsive_image.styles.custom_wide
+  module:
+    - bg_img_field
+    - text
+id: block_content.featured_game.default
+targetEntityType: block_content
+bundle: featured_game
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_background_image:
+    weight: 4
+    label: hidden
+    settings:
+      responsive_image_style: custom_wide
+      image_link: ''
+    third_party_settings: {  }
+    type: bg_img_field_formatter
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  search_api_excerpt: true
