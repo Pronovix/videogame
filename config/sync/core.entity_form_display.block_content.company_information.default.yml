@@ -1,0 +1,33 @@
+uuid: ee9270c2-b12c-430e-9cd2-0658e3122eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.company_information
+    - field.field.block_content.company_information.body
+  module:
+    - text
+id: block_content.company_information.default
+targetEntityType: block_content
+bundle: company_information
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

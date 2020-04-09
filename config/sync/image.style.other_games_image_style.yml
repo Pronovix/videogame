@@ -1,0 +1,15 @@
+uuid: ded55f8f-3ca1-45e7-9052-b9398cc0e799
+langcode: en
+status: true
+dependencies: {  }
+name: other_games_image_style
+label: 'Other games image style (250 x 250)'
+effects:
+  6c783350-38da-4a8a-9c0a-cb2dfdc05060:
+    uuid: 6c783350-38da-4a8a-9c0a-cb2dfdc05060
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      anchor: center-center

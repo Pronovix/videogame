@@ -1,0 +1,30 @@
+uuid: 515979b8-9680-42e5-9736-7fd4b311198c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.field.block_content.genres_to_play.body
+    - field.field.block_content.genres_to_play.field_genre
+  module:
+    - text
+id: block_content.genres_to_play.default
+targetEntityType: block_content
+bundle: genres_to_play
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_genre:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: a66d2a9a-b518-45e4-89cf-99c9189e56c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.genres_to_play.body
+field_name: body
+entity_type: block_content
+bundle: genres_to_play
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

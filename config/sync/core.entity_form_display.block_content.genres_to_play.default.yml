@@ -1,0 +1,42 @@
+uuid: 129f1831-1e93-4a27-9225-3f745a2a732a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.genres_to_play
+    - field.field.block_content.genres_to_play.body
+    - field.field.block_content.genres_to_play.field_genre
+  module:
+    - text
+id: block_content.genres_to_play.default
+targetEntityType: block_content
+bundle: genres_to_play
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_genre:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

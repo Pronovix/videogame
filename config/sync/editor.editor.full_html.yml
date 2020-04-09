@@ -24,6 +24,7 @@ settings:
             - Subscript
             - '-'
             - RemoveFormat
+            - JustifyCenter
         -
           name: Linking
           items:
@@ -45,19 +46,22 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
             - ShowBlocks
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
-      styles: ''
+      styles: "h1.heading1|Heading 1\r\nh2.heading2|Heading 2\r\nh3.heading3|Heading 3\r\np.parbold|Paragraph bold\r\nspan.orangeupper|Orange uppercase text\r\na.btn.btn-primary|Button primary\r\na.btn.btn-secondary|Button secondary"
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
