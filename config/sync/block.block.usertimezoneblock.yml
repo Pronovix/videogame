@@ -1,0 +1,20 @@
+uuid: 79adec60-f230-402c-a160-e0e421b15b2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user_timezone
+  theme:
+    - subtheme_videogame
+id: usertimezoneblock
+theme: subtheme_videogame
+region: header
+weight: -2
+provider: null
+plugin: user_timezone_block
+settings:
+  id: user_timezone_block
+  label: 'User timezone block'
+  provider: user_timezone
+  label_display: '0'
+visibility: {  }

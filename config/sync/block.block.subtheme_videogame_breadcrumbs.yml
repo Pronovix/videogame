@@ -12,7 +12,7 @@ _core:
 id: subtheme_videogame_breadcrumbs
 theme: subtheme_videogame
 region: header
-weight: -100
+weight: -7
 provider: null
 plugin: system_breadcrumb_block
 settings:
