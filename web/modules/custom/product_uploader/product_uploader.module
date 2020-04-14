@@ -13,19 +13,24 @@ declare(strict_types = 1);
 use Drupal\Core\Entity\EntityInterface;
 
 /**
+ * The fragment that the user's email address should contain.
+ */
+const PRODUCT_UPLOADER_FRAGMENT = '+productuploader';
+
+/**
+ * The name of the role.
+ */
+const PRODUCT_UPLOADER_ROLE = 'product_uploader';
+
+/**
  * Implements hook_ENTITY_TYPE_presave().
  */
 function product_uploader_user_presave(EntityInterface $entity): void {
-  $fragment = '+productuploader';
   $email = $entity->getEmail();
-  if (strpos($email, $fragment)) {
-    $entity->addRole('product_uploader');
+  if (strpos($email, PRODUCT_UPLOADER_FRAGMENT)) {
+    $entity->addRole(PRODUCT_UPLOADER_ROLE);
   }
   else {
-    $entity->removeRole('product_uploader');
+    $entity->removeRole(PRODUCT_UPLOADER_ROLE);
   }
 }
-
-/*https://red-route.org/articles/adding-roles-user-programmatically-drupal-8
- *https://drupal.stackexchange.com/questions/189210/how-do-i-assign-a-specific-role-to-each-newly-registered-user
- */
