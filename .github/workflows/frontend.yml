@@ -1,8 +1,8 @@
-name: ESLint
+name: Frontend checks
 on: push
 jobs:
   build:
-    name: Run ESLint
+    name: Run ESLint & Prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,4 +21,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - run: yarn install
-      - run: yarn run eslint .
+      - name: Run ESLint
+        run: yarn run eslint .
+      - name: Run Prettier
+        run: yarn run prettier -l "web/themes/custom/*/src/**/*.scss"
