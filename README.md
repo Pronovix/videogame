@@ -78,6 +78,11 @@
 1. (optional, only need to do once) `docker-compose exec node yarn`
 1. `docker-compose exec node yarn run eslint .`
 
+#### Prettier for SCSS
+
+1. (optional, only need to do once) `docker-compose exec node yarn`
+1. `docker-compose exec node yarn run prettier --write "web/themes/custom/*/src/**/*.scss"`
+
 ### Notes
 
 * If the containers are restarted (e.g. after reboot or after `docker-compose restart`), the webserver port will change, make sure you have the right one with `docker-compose ps webserver`
