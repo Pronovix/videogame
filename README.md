@@ -11,7 +11,6 @@
 
 1. `git clone git@github.com:Pronovix/videogame.git`
 1. `cd videogame`
-1. `cp .env.example .env` (modify `.env` file contents to your needs)
 1. `cp web/sites/default/example.settings.local.php web/sites/default/settings.local.php` (modify `settings.local.php` file contents to your needs)
 1. `docker-compose up -d`
 1. `docker-compose exec php composer install`
