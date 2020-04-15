@@ -39,7 +39,7 @@ class GenreRules extends Constraint {
   public $notCapitalized = 'First letters of words should be capitalized.';
 
   /**
-   * Error message for dashes and whitespaces not being followed and preceded by letters and/or being redundant.
+   * Error for too many - or spaces and/or not followed and preceded by letters.
    *
    * @var string
    */
