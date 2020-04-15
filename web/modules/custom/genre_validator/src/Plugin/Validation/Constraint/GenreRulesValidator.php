@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Drupal\genre_validator\Plugin\Validation\Constraint;
 
@@ -24,7 +24,7 @@ class GenreRulesValidator extends ConstraintValidator {
         $this->context->addViolation($constraint->noNumbers, ['%value' => $genre->value]);
       }
 
-      if (!preg_match('/[^\W]+(\b(?! |-)\b)/', $genre->value)) {
+      if (preg_match('/[^-\s\w]/', $genre->value)) {
         $this->context->addViolation($constraint->noComma, ['%value' => $genre->value]);
       }
 
@@ -32,12 +32,8 @@ class GenreRulesValidator extends ConstraintValidator {
         $this->context->addViolation($constraint->notCapitalized, ['%value' => $genre->value]);
       }
 
-      if (!preg_match('/^(?!(?:.*-(?=$|-))|-).*$/', $genre->value)) {
+      if (preg_match('/.*(?= |-)+(?<= |-).*/', $genre->value)) {
         $this->context->addViolation($constraint->dashBeforeAfter, ['%value' => $genre->value]);
-      }
-
-      if (!preg_match('/^(\w+([\s-]\w+)?)+$/', $genre->value)) {
-        $this->context->addViolation($constraint->oneDashOrSpace, ['%value' => $genre->value]);
       }
 
     }

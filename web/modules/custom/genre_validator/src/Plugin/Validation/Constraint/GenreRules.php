@@ -22,34 +22,27 @@ class GenreRules extends Constraint {
    *
    * @var string
    */
-  public $noNumbers = 'Invalid genre entry. Example formats: Role Playing, Co-Op, Rpg or Turn-Based Combat';
+  public $noNumbers = 'No numbers allowed';
 
   /**
    * Error message for special characters except dash.
    *
    * @var string
    */
-  public $noComma = 'Invalid genre entry. Example formats: Role Playing, Co-Op, Rpg or Turn-Based Combat';
+  public $noComma = 'No commas and special characters allowed.';
 
   /**
    * Error message for non capitalized first letters.
    *
    * @var string
    */
-  public $notCapitalized = 'Invalid genre entry. Example formats: Role Playing, Co-Op, Rpg or Turn-Based Combat';
+  public $notCapitalized = 'First letters of words should be capitalized.';
 
   /**
-   * Error message for dashes not being followed and preceded by letters.
+   * Error message for dashes and whitespaces not being followed and preceded by letters and/or being redundant.
    *
    * @var string
    */
-  public $dashBeforeAfter = 'Invalid genre entry. Example formats: Role Playing, Co-Op, Rpg or Turn-Based Combat';
-
-  /**
-   * Error message for using multiple spaces and/or dashes in succession.
-   *
-   * @var string
-   */
-  public $oneDashOrSpace = 'Invalid genre entry. Example formats: Role Playing, Co-Op, Rpg or Turn-Based Combat';
+  public $dashBeforeAfter = 'Whitespaces and dashes should not be redundant and they should be preceded and followed by letters.';
 
 }
