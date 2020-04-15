@@ -17,4 +17,4 @@ settings:
   label: 'User timezone block'
   provider: user_timezone
   label_display: '0'
-visibility: {  }
+  visibility: {  }
