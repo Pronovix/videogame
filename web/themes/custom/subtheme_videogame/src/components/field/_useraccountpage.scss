@@ -1,0 +1,31 @@
+.user {
+  &__name {
+    font-size: $h1-font-size;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__user-picture {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &__field {
+    &-first-name,
+    &-last-name,
+    &-self-summary,
+    &-uploaded-products {
+      .field__label {
+        text-transform: uppercase;
+        color: $orange;
+        margin: 0 0 2rem 2rem;
+      }
+      .field__item {
+        margin: 0 2rem 2rem 0;
+      }
+    }
+  }
+}
