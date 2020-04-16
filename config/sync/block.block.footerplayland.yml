@@ -1,0 +1,25 @@
+uuid: 268f638a-1d0c-41c8-829f-310bc4c53c80
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b8758650-346d-4a08-b5e3-082c7bbeb14c'
+  module:
+    - block_content
+  theme:
+    - subtheme_videogame
+id: footerplayland
+theme: subtheme_videogame
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:b8758650-346d-4a08-b5e3-082c7bbeb14c'
+settings:
+  id: 'block_content:b8758650-346d-4a08-b5e3-082c7bbeb14c'
+  label: 'Footer Playland'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
