@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * This file adds/removes “Product uploader” role to the user upon registration.
+ *
+ * ...when the user’s email address contains/doesn't contain a “
+ * +productuploader” fragment (e.g. johndoe+productuploaded@gmail.com).
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\product_uploader\ProductUploader;
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function product_uploader_user_presave(EntityInterface $entity): void {
+  $email = $entity->getEmail();
+  if (strpos($email, ProductUploader::PRODUCT_UPLOADER_FRAGMENT)) {
+    $entity->addRole(ProductUploader::PRODUCT_UPLOADER_ROLE);
+  }
+  else {
+    $entity->removeRole(ProductUploader::PRODUCT_UPLOADER_ROLE);
+  }
+}
