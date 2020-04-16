@@ -11,17 +11,17 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityInterface;
-use Drupal\product_uploader\ProductUploaderInterface;
+use Drupal\product_uploader\ProductUploader;
 
 /**
  * Implements hook_ENTITY_TYPE_presave().
  */
 function product_uploader_user_presave(EntityInterface $entity): void {
   $email = $entity->getEmail();
-  if (strpos($email, ProductUploaderInterface::PRODUCT_UPLOADER_FRAGMENT)) {
-    $entity->addRole(ProductUploaderInterface::PRODUCT_UPLOADER_ROLE);
+  if (strpos($email, ProductUploader::PRODUCT_UPLOADER_FRAGMENT)) {
+    $entity->addRole(ProductUploader::PRODUCT_UPLOADER_ROLE);
   }
   else {
-    $entity->removeRole(ProductUploaderInterface::PRODUCT_UPLOADER_ROLE);
+    $entity->removeRole(ProductUploader::PRODUCT_UPLOADER_ROLE);
   }
 }

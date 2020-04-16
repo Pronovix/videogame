@@ -7,7 +7,7 @@ namespace Drupal\product_uploader;
 /**
  * Class for the Product Uploder role.
  */
-class ProductUploaderInterface {
+final class ProductUploader {
   /**
    * The fragment that the user's email address should contain.
    */
@@ -17,5 +17,10 @@ class ProductUploaderInterface {
    * The name of the role.
    */
   public const PRODUCT_UPLOADER_ROLE = 'product_uploader';
+
+  /**
+   * Empty private constructor for ProductUploader class.
+   */
+  private function __construct() {}
 
 }
