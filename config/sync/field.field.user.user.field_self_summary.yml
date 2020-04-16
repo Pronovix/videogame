@@ -1,0 +1,20 @@
+uuid: 17dc1190-c73f-41d4-a57c-fb9d7be0291e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_self_summary
+  module:
+    - user
+id: user.user.field_self_summary
+field_name: field_self_summary
+entity_type: user
+bundle: user
+label: Self-summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
