@@ -3,11 +3,138 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_self_summary
+    - field.field.user.user.field_uploaded_products
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - layout_builder
+    - layout_discovery
+    - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 75-25
+        components:
+          678b2532-94bf-4d5a-bac2-8e71824fb5b7:
+            uuid: 678b2532-94bf-4d5a-bac2-8e71824fb5b7
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_last_name'
+              label: 'Last name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 5
+          ca609f6d-3a35-49da-9431-e65a86ad3a11:
+            uuid: ca609f6d-3a35-49da-9431-e65a86ad3a11
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_self_summary'
+              label: Self-summary
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 7
+          6b974a7b-49f9-47e8-97fc-a790651e3fb6:
+            uuid: 6b974a7b-49f9-47e8-97fc-a790651e3fb6
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_first_name'
+              label: 'First name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+          df44b51a-bda8-46d7-aa74-1330544e913f:
+            uuid: df44b51a-bda8-46d7-aa74-1330544e913f
+            region: second
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label: Picture
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: other_games_image_style
+                  image_link: content
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          80c1eff3-db69-4cdd-8e6d-a6190cf87ed1:
+            uuid: 80c1eff3-db69-4cdd-8e6d-a6190cf87ed1
+            region: first
+            configuration:
+              id: 'field_block:user:user:field_uploaded_products'
+              label: 'Uploaded products'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional: {  }
+            weight: 8
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-50-25
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
 id: user.user.default
@@ -15,9 +142,33 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_first_name:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_self_summary:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_uploaded_products:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   member_for:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0
@@ -28,4 +179,6 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_last_name: true
+  layout_builder__layout: true
   search_api_excerpt: true

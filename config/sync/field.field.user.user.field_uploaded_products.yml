@@ -1,0 +1,30 @@
+uuid: 8f91e505-3084-42c0-9a9a-02e7f6519ae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_uploaded_products
+    - node.type.product
+  module:
+    - user
+id: user.user.field_uploaded_products
+field_name: field_uploaded_products
+entity_type: user
+bundle: user
+label: 'Uploaded products'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      product: product
+    sort:
+      field: nid
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
