@@ -1,8 +1,16 @@
 // Page: Footer
 // -----------------------------------------------------------------------------
-.footer__name {
-  color: $orange;
-  font-size: 1.5rem;
-  font-weight: $font-weight-bold;
-  text-transform: uppercase;
+.block {
+  &--footerplayland p {
+    color: $orange;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  &--poweredbydrupal a {
+    color: $white;
+    text-decoration: none;
+  }
 }
