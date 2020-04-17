@@ -123,6 +123,9 @@ class UserTimezoneSettingForm extends ConfigFormBase {
     return parent::buildForm($form, $form_state);
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $morning_start = $form_state->getValue('morning_start');
     $morning_end = $form_state->getValue('morning_end');
@@ -148,7 +151,10 @@ class UserTimezoneSettingForm extends ConfigFormBase {
 
   }
 
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state): void {
     $this->config('user_timezone.settings')
       ->set('morning', $form_state->getValue('morning'))
       ->set('afternoon', $form_state->getValue('afternoon'))
