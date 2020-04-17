@@ -4,6 +4,8 @@ user_timezone_defaults:
   afternoon_start: 12
   afternoon_end: 18
   evening_start: 18
-  evening_end: 00
-  night_start: 00
+  evening_end: 0
+  night_start: 0
   night_end: 7
+_core:
+  default_config_hash: YnayPRdjLPz5xSt4SPkqq-C6PFnOdRBedjIJ4ZdvUYk
