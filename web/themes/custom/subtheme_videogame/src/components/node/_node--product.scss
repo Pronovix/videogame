@@ -3,7 +3,8 @@
 .product {
   &__title {
     position: relative;
-    left: 23rem;
+    display: table;
+    margin: 0 auto;
     top: 23rem;
     font-size: 3rem;
     color: $gray-500;
