@@ -17,12 +17,11 @@
   &__field {
     &-first-name,
     &-last-name,
-    &-self-summary,
-    &-uploaded-products {
+    &-self-summary {
       .field__label {
         text-transform: uppercase;
         color: $orange;
-        margin: 0 0 2rem 2rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -42,17 +41,6 @@
       .field__item {
         margin: 0 2rem 2rem 3rem;
         text-align: justify;
-      }
-    }
-
-    &-uploaded-products {
-      .field__item {
-        margin: 0 2rem;
-
-        a {
-          color: $white;
-          text-decoration: none;
-        }
       }
     }
   }
