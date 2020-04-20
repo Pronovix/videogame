@@ -1,7 +1,8 @@
 .catalog {
   &__title {
     position: relative;
-    left: 5.9rem;
+    display: flex;
+    justify-content: center;
     top: 7rem;
     z-index: 99;
     text-shadow: 0.05rem 0.05rem $orange;
