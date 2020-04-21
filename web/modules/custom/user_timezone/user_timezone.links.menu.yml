@@ -1,5 +1,5 @@
 user_timezone.admin_config_timezone:
-  title: 'User timezone'
+  title: 'User timezone setting'
   description: 'Manage time of day intervals'
   parent: system.admin_config_ui
   route_name: user_timezone.admin_config_timezone

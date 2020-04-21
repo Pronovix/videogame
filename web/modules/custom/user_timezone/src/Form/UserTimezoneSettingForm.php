@@ -34,8 +34,8 @@ class UserTimezoneSettingForm extends ConfigFormBase {
 
     $form['morning_start'] = [
       '#type' => 'number',
-      '#title' => $this->t('Beginning of morning'),
-      '#description' => $this->t('Set the start point of your custom morning time range; time interval (e.g.: 06-12)'),
+      '#title' => $this->t('Morning'),
+      '#description' => $this->t('Set the start point of your custom morning time range; the start of morning time is also the end of night time.'),
       '#min' => 00,
       '#max' => 23,
       '#default value' => $config->get('morning_start'),
@@ -43,21 +43,10 @@ class UserTimezoneSettingForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['morning_end'] = [
-      '#type' => 'number',
-      '#title' => $this->t('End of morning'),
-      '#description' => $this->t('Set the end point of your custom morning time range (e.g.: 06-12)'),
-      '#min' => 00,
-      '#max' => 23,
-      '#default value' => $config->get('morning_end'),
-      '#element validate' => 'validateNumber',
-      '#required' => TRUE,
-    ];
-
     $form['afternoon_start'] = [
       '#type' => 'number',
-      '#title' => $this->t('Beginning of afternoon'),
-      '#description' => $this->t('Set the start point of your custom afternoon time range (e.g.: 12-18)'),
+      '#title' => $this->t('Afternoon'),
+      '#description' => $this->t('Set the start point of your custom afternoon time range; the start of afternoon time is also the end of morning time.'),
       '#min' => 00,
       '#max' => 23,
       '#default value' => $config->get('afternoon_start'),
@@ -65,21 +54,10 @@ class UserTimezoneSettingForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['afternoon_end'] = [
-      '#type' => 'number',
-      '#title' => $this->t('End of afternoon'),
-      '#description' => $this->t('Set the end point of your custom afternoon time range (e.g.: 12-18)'),
-      '#min' => 00,
-      '#max' => 23,
-      '#default value' => $config->get('afternoon_end'),
-      '#element validate' => 'validateNumber',
-      '#required' => TRUE,
-    ];
-
     $form['evening_start'] = [
       '#type' => 'number',
-      '#title' => $this->t('Beginning of evening'),
-      '#description' => $this->t('Set the start point of your custom evening time range (e.g.: 18-00)'),
+      '#title' => $this->t('Evening'),
+      '#description' => $this->t('Set the start point of your custom evening time range; the start of evening time is also the end of afternoon time.'),
       '#min' => 00,
       '#max' => 23,
       '#default value' => $config->get('evening_start'),
@@ -87,35 +65,13 @@ class UserTimezoneSettingForm extends ConfigFormBase {
       '#required' => TRUE,
     ];
 
-    $form['evening_end'] = [
-      '#type' => 'number',
-      '#title' => $this->t('End of evening'),
-      '#description' => $this->t('Set the end point of your custom evening time range (e.g.: 18-00)'),
-      '#min' => 00,
-      '#max' => 23,
-      '#default value' => $config->get('evening_end'),
-      '#element validate' => 'validateNumber',
-      '#required' => TRUE,
-    ];
-
     $form['night_start'] = [
       '#type' => 'number',
-      '#title' => $this->t('Beginning of night'),
-      '#description' => $this->t('Set the start point of your custom night time range (e.g.: 00-05)'),
+      '#title' => $this->t('Night'),
+      '#description' => $this->t('Set the start point of your custom night time range; the start of night time is also the end of evening time.'),
       '#min' => 00,
       '#max' => 23,
       '#default value' => $config->get('night_beginning'),
-      '#element validate' => 'validateNumber',
-      '#required' => TRUE,
-    ];
-
-    $form['night_end'] = [
-      '#type' => 'number',
-      '#title' => $this->t('End of night'),
-      '#description' => $this->t('Set the end point of your custom night time ranger (e.g.: 00-05)'),
-      '#min' => 00,
-      '#max' => 23,
-      '#default value' => $config->get('night_end'),
       '#element validate' => 'validateNumber',
       '#required' => TRUE,
     ];
@@ -128,25 +84,42 @@ class UserTimezoneSettingForm extends ConfigFormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
     $morning_start = $form_state->getValue('morning_start');
-    $morning_end = $form_state->getValue('morning_end');
     $afternoon_start = $form_state->getValue('afternoon_start');
-    $afternoon_end = $form_state->getValue('afternoon_end');
     $evening_start = $form_state->getValue('evening_start');
-    $evening_end = $form_state->getValue('evening_end');
     $night_start = $form_state->getValue('night_start');
-    $night_end = $form_state->getValue('night_end');
 
-    if ($night_end !== $morning_start) {
-      $form_state->setErrorByName('night_end', $this->t('The value of the morning start time has to be the same as the value of the night end time.'));
+    if ($morning_start == $afternoon_start) {
+      $form_state->setErrorByName('morning_start', $this->t('The value of the morning start time cannot be the same as the value of the afternoon start time.'));
     }
-    if ($morning_end != $afternoon_start) {
-      $form_state->setErrorByName('morning_end', $this->t('The value of the afternoon start time has to be the same as the value of the morning end time.'));
+
+    if ($morning_start == $evening_start) {
+      $form_state->setErrorByName('morning_start', $this->t('The value of the morning start time cannot be the same as the value of the evening start time.'));
     }
-    if ($afternoon_end != $evening_start) {
-      $form_state->setErrorByName('afternoon_end', $this->t('The value of the evening start time has to be the same as the value of the afternoon end time.'));
+
+    if ($morning_start == $night_start) {
+      $form_state->setErrorByName('morning_start', $this->t('The value of the morning start time cannot be the same as the value of the night start time.'));
     }
-    if ($evening_end != $night_start) {
-      $form_state->setErrorByName('evening_end', $this->t('The value of the night start time has to be the same as the value of the evening end time.'));
+
+    if ($afternoon_start == $evening_start) {
+      $form_state->setErrorByName('afternoon_start', $this->t('The value of the afternoon start time cannot be the same as the value of the evening start time.'));
+    }
+
+    if ($afternoon_start == $night_start) {
+      $form_state->setErrorByName('afternoon_start', $this->t('The value of the afternoon start cannot be the same as the value of the night start time.'));
+    }
+
+    if ($evening_start == $night_start) {
+      $form_state->setErrorByName('evening_start', $this->t('The value of the evening start time cannot be the same as the value of the night start time.'));
+    }
+
+    if ($night_start > $morning_start || $night_start > $afternoon_start || $night_start > $evening_start) {
+      $form_state->setErrorByName('night_start', $this->t('The value of the night start time has to be less than the value of morning, afternoon and evening start time.'));
+    }
+    if ($morning_start > $afternoon_start || $morning_start > $evening_start) {
+      $form_state->setErrorByName('morning_start', $this->t('The value of the morning start time has to be less than the value of the afternoon and evening start time.'));
+    }
+    if ($afternoon_start > $evening_start) {
+      $form_state->setErrorByName('afternoon_start', $this->t('The value of the afternoon start time has to be less than the value of the evening start time.'));
     }
 
   }

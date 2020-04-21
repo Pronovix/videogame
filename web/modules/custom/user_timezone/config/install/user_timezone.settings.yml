@@ -1,9 +1,4 @@
-user_timezone_defaults:
-  morning_start: 7
-  morning_end: 12
-  afternoon_start: 12
-  afternoon_end: 18
-  evening_start: 18
-  evening_end: 00
-  night_start: 00
-  night_end: 7
+morning_start: 7
+afternoon_start: 12
+evening_start: 18
+night_start: 00
