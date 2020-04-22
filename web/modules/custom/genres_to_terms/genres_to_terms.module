@@ -13,8 +13,7 @@ use Drupal\taxonomy\Entity\Term;
 /**
  * Contains hooks and callbacks for genres_to_terms.module.
  */
-function genres_to_terms_entity_presave(EntityInterface $entity): void
-{
+function genres_to_terms_entity_presave(EntityInterface $entity): void {
   if ($entity->bundle() === 'product') {
     unset($entity->field_genre_tags);
     $vid = 'genres';
