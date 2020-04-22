@@ -8,23 +8,25 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
 use Drupal\taxonomy\Entity\Term;
 
 /**
  * Contains hooks and callbacks for genres_to_terms.module.
  */
 function genres_to_terms_entity_presave(EntityInterface $entity): void {
-  if ($entity->bundle() === 'product') {
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'product') {
     unset($entity->field_genre_tags);
     $vid = 'genres';
     $terms = Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vid);
     $inputs = explode(PHP_EOL, $entity->get('field_genres')->value);
     $termnames = [];
     foreach ($terms as $term) {
-      $termnames[] = $term->name;
+      $termnames[$term->name] = $term;
     }
+    $term_ids = [];
     foreach ($inputs as $input) {
-      if (!in_array($input, $termnames)) {
+      if (empty($termnames[$input])) {
         $term = Term::create([
           'name' => $input,
           'vid' => 'genres',
@@ -34,7 +36,8 @@ function genres_to_terms_entity_presave(EntityInterface $entity): void {
       $assign = Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['name' => $input, 'vid' => 'genres']);
       $assign = reset($assign);
       $assign_id = $assign->id();
-      $entity->field_genre_tags[] = $assign_id;
+      $term_ids[] = ['target_id' => $assign_id];
     }
+    $entity->set('field_genre_tags', $term_ids);
   }
 }
