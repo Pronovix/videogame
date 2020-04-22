@@ -13,4 +13,16 @@
     opacity: 0.45;
     margin-bottom: 2rem;
   }
+
+  &__description {
+    text-align: justify;
+  }
+}
+
+.views-exposed-form {
+  display: flex;
+
+  .js-form-item-search-api-fulltext {
+    width: 100%;
+  }
 }
