@@ -2,3 +2,6 @@ services:
   user_timezone.salutation:
     class: Drupal\user_timezone\UserTimezoneSalutation
     arguments: ['@current_user', '@datetime.time', '@string_translation']
+  user_timezone.recommendation:
+    class: Drupal\user_timezone\UserTimezoneRecommendation
+    arguments: ['@datetime.time', '@string_translation']
