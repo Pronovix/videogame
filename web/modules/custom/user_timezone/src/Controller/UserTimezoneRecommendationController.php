@@ -16,11 +16,15 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class UserTimezoneRecommendationController extends ControllerBase {
 
   /**
-   * @var EntityTypeManagerInterface
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected $entityTypeManager;
 
   /**
+   * The query factory.
+   *
    * @var \Drupal\Core\Config\Entity\QueryFactory
    */
   protected $queryFactory;
@@ -28,29 +32,47 @@ class UserTimezoneRecommendationController extends ControllerBase {
   /**
    * Constructs the UserTimezoneRecommendationController object.
    *
-   * @param EntityTypeManagerInterface $entityTypeManager
-   * @param QueryFactory $queryFactory
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
+   *   The entity type manager.
+   * @param \Drupal\Core\Config\Entity\QueryFactory $queryFactory
+   *   The query factory.
    */
   public function __construct(EntityTypeManagerInterface $entityTypeManager, QueryFactory $queryFactory) {
     $this->entityTypeManager = $entityTypeManager;
     $this->queryFactory = $queryFactory;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('entity_type.manager')
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function index() {
-   return new JsonResponse(
-     ['data' =>  $this->getData(),
-       'method' => 'GET',
-       'status' => 200]
-   );
+    return new JsonResponse([
+      'data' => $this->getData(),
+      'method' => 'GET',
+      'status' => 200,
+    ]
+    );
   }
 
-  public function getData() {
+  /**
+   * A helper function returning results.
+   *
+   * @return array
+   *   Returns the title and the url of the videogame product.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  public function getData(): array {
     $result = [];
     $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $nids = $query
@@ -61,10 +83,10 @@ class UserTimezoneRecommendationController extends ControllerBase {
 
     if ($nids) {
       foreach ($nids as $node_id) {
-        $node = \Drupal\node\Entity\Node::load($node_id);
+        $node = $this->entityTypeManager->getStorage('node_id');
         $result[] = [
-          "id" => $node->id(),
-          "title" => $node->getTitle(),
+          'id' => $node->id(),
+          'title' => $node->getTitle(),
         ];
       }
     }

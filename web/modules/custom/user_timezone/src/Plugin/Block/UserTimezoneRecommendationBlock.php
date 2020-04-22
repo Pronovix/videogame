@@ -22,7 +22,7 @@ class UserTimezoneRecommendationBlock extends BlockBase implements ContainerFact
   /**
    * The recommendation.
    *
-   * @var UserTimezoneRecommendation
+   * @var \Drupal\user_timezone\UserTimezoneRecommendation
    */
   protected $recommendation;
 
@@ -31,18 +31,21 @@ class UserTimezoneRecommendationBlock extends BlockBase implements ContainerFact
    *
    * @param array $configuration
    *   A configuration array containing information about the plugin instance.
-   * @param $plugin_id
+   * @param string $plugin_id
    *   The plugin_ID for the plugin instance.
-   * @param $plugin_definition
+   * @param string $plugin_definition
    *   The plugin implementation definition.
-   * @param UserTimezoneRecommendation $recommendation
+   * @param \Drupal\user_timezone\UserTimezoneRecommendation $recommendation
    *   The recommendation.
    */
-  public function __construct(array $configuration, string $plugin_id, $plugin_definition, UserTimezoneRecommendation $recommendation) {
+  public function __construct(array $configuration, string $plugin_id, string $plugin_definition, UserTimezoneRecommendation $recommendation) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->recommendation = $recommendation;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static($configuration, $plugin_id, $plugin_definition,
       $container->get('user_timezone.recommendation')
