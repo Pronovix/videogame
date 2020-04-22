@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_image
+    - image.style.product_image_style
     - search_api.index.product_index
     - system.menu.main
   module:
@@ -192,7 +193,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image
+          element_class: catalog__catimage
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -206,7 +207,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: product_image_style
             image_link: ''
           group_column: ''
           group_columns: {  }

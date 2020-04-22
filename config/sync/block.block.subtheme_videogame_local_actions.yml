@@ -9,7 +9,7 @@ _core:
 id: subtheme_videogame_local_actions
 theme: subtheme_videogame
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: local_actions_block
 settings:
