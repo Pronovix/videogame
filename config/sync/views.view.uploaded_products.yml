@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
+    - image.style.product_image_style
     - node.type.product
     - user.role.administrator
     - user.role.product_uploader
@@ -196,7 +197,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: product_image_style
             image_link: content
           group_column: ''
           group_columns: {  }
