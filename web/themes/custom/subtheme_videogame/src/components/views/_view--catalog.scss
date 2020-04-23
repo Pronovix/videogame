@@ -13,4 +13,20 @@
     opacity: 0.45;
     margin-bottom: 2rem;
   }
+
+  &__image--marginless {
+    opacity: 0.45;
+  }
+
+  &__description {
+    text-align: justify;
+  }
+}
+
+.views-exposed-form {
+  display: flex;
+
+  .js-form-item-search-api-fulltext {
+    width: 100%;
+  }
 }

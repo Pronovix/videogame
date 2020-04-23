@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_image
+    - image.style.product_image_style
     - search_api.index.product_index
     - system.menu.main
   module:
@@ -192,7 +193,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image
+          element_class: catalog__image--marginless
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -206,7 +207,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: product_image_style
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -269,7 +270,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: catalog__description
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -339,7 +340,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: catalog__description
           element_default_classes: true
           empty: '{{ body }}'
           hide_empty: false
@@ -364,7 +365,7 @@ display:
           exposed: true
           expose:
             operator_id: search_api_fulltext_op
-            label: 'Product search'
+            label: ''
             description: ''
             use_operator: false
             operator: search_api_fulltext_op
@@ -378,6 +379,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              product_uploader: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -408,7 +410,7 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-      title: 'Product Catalog'
+      title: ''
       header: {  }
       footer: {  }
       empty:

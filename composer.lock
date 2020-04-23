@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2eb4477497c389b2fac426b86f3f2aa5",
+    "content-hash": "aa39cb56ee4dbcfdfb3b1c5323bcb154",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2642,6 +2642,57 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/views_role_based_global_text",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_role_based_global_text.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_role_based_global_text-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "e6c3a4e4931206a8137a6de5574dac4d0ee89bd0"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1571914984",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "amitgoyal",
+                    "homepage": "https://www.drupal.org/user/56441"
+                },
+                {
+                    "name": "joshi.rohit100",
+                    "homepage": "https://www.drupal.org/user/2504832"
+                }
+            ],
+            "description": "Module provides the option to show the content in Global: Text Area on the role basis.",
+            "homepage": "https://www.drupal.org/project/views_role_based_global_text",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_role_based_global_text"
             }
         },
         {

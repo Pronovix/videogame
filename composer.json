@@ -26,6 +26,7 @@
         "drupal/radix": "^4.8",
         "drupal/search_api": "1.x-dev",
         "drupal/similarterms": "^1.4",
+        "drupal/views_role_based_global_text": "^1.1",
         "drush/drush": "^10.2"
     },
     "require-dev": {
