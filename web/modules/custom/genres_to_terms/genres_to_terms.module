@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Creates taxonomy terms based on the Genres field's input.
+ */
+
+declare(strict_types = 1);
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Contains hooks and callbacks for genres_to_terms.module.
+ */
+function genres_to_terms_entity_presave(EntityInterface $entity): void {
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'product') {
+    $vid = 'genres';
+    $inputs = explode(PHP_EOL, trim($entity->get('field_genres')->value));
+    $terms = Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+      'vid' => $vid,
+      'name' => $inputs,
+    ]);
+    $termnames = [];
+    foreach ($terms as $term) {
+      $termnames[$term->name] = $term;
+    }
+    $term_ids = [];
+    foreach ($inputs as $input) {
+      if (empty($termnames[$input])) {
+        $term = Term::create([
+          'name' => $input,
+          'vid' => 'genres',
+        ]);
+        $term->save();
+        $termnames[$input] = $term;
+      }
+      $term_ids[] = ['target_id' => $termnames[$input]->id()];
+    }
+    $entity->set('field_genre_tags', $term_ids);
+  }
+}
