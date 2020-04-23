@@ -5,24 +5,12 @@ user_timezone.settings:
     morning_start:
       type: integer
       label: 'Integer'
-    morning_end:
-      type: intteger
-      label: 'Integer'
     afternoon_start:
-      type: integer
-      label: 'Integer'
-    afternoon_end:
       type: integer
       label: 'Integer'
     evening_start:
       type: integer
       label: 'Integer'
-    evening_end:
-      type: integer
-      label: 'Integer'
     night_start:
-      type: integer
-      label: 'Integer'
-    night_end:
       type: integer
       label: 'Integer'
