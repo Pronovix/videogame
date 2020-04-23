@@ -8,8 +8,8 @@ dependencies:
     - subtheme_videogame
 id: usertimezoneblock
 theme: subtheme_videogame
-region: header
-weight: -2
+region: navbar_right
+weight: -6
 provider: null
 plugin: user_timezone_block
 settings:
