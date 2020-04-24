@@ -10,12 +10,14 @@ dependencies:
     - field.field.node.product.field_image
     - field.field.node.product.field_minimum_game_session_time
     - node.type.product
+    - views.view.games_of_similar_genre
   module:
     - image
     - layout_builder
     - layout_discovery
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -142,19 +144,21 @@ third_party_settings:
             weight: 4
         third_party_settings: {  }
       -
-        layout_id: layout_threecol_section
+        layout_id: layout_onecol
         layout_settings:
-          label: links
-          column_widths: 33-34-33
+          label: Similar
         components:
-          d63835a9-034b-4574-9fd6-a0ee4c508d2c:
-            uuid: d63835a9-034b-4574-9fd6-a0ee4c508d2c
-            region: second
+          b0c17254-51aa-4671-bcbe-9e18f5f31c75:
+            uuid: b0c17254-51aa-4671-bcbe-9e18f5f31c75
+            region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:product:links'
+              id: 'views_block:games_of_similar_genre-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
             additional: {  }
             weight: 0
         third_party_settings: {  }
