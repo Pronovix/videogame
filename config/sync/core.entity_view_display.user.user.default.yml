@@ -6,15 +6,16 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_last_name
     - field.field.user.user.field_self_summary
-    - field.field.user.user.field_uploaded_products
     - field.field.user.user.user_picture
     - image.style.thumbnail
+    - views.view.uploaded_products
   module:
     - image
     - layout_builder
     - layout_discovery
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -127,25 +128,25 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          80c1eff3-db69-4cdd-8e6d-a6190cf87ed1:
-            uuid: 80c1eff3-db69-4cdd-8e6d-a6190cf87ed1
-            region: first
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          7b597bab-ee8e-40fb-9888-c8928f261d7a:
+            uuid: 7b597bab-ee8e-40fb-9888-c8928f261d7a
+            region: content
             configuration:
-              id: 'field_block:user:user:field_uploaded_products'
-              label: 'Uploaded products'
-              provider: layout_builder
+              id: 'views_block:uploaded_products-block_1'
+              label: ''
+              provider: views
               label_display: '0'
-              formatter:
-                label: inline
-                type: entity_reference_label
-                settings:
-                  link: true
-                third_party_settings: {  }
-              context_mapping:
-                entity: '@user.current_user_context:current_user'
-                view_mode: view_mode
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
             additional: {  }
-            weight: 8
+            weight: 0
         third_party_settings: {  }
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -167,14 +168,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
-  field_uploaded_products:
-    weight: 8
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   member_for:
     weight: 5
