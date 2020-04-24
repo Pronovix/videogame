@@ -13,7 +13,7 @@ _core:
 id: subtheme_videogame_account_menu
 theme: subtheme_videogame
 region: navbar_right
-weight: -7
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:
