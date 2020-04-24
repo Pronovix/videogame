@@ -5,6 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\user_timezone;
 
 use Drupal\Component\Datetime\TimeInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslationInterface;
@@ -17,6 +18,13 @@ class UserTimezoneSalutation {
   use StringTranslationTrait;
 
   /**
+   * The value of time.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
    * The current user service.
    *
    * @var \Drupal\Core\Session\AccountInterface
@@ -26,7 +34,8 @@ class UserTimezoneSalutation {
   /**
    * {@inheritdoc}
    */
-  public function __construct(AccountProxyInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
+  public function __construct(ConfigFactoryInterface $configFactory, AccountProxyInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
+    $this->configFactory = $configFactory;
     $this->currentUser = $currentUser;
     $this->time = $time;
     $this->stringTranslation = $stringTranslation;
