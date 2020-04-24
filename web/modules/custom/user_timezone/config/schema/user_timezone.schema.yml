@@ -1,0 +1,16 @@
+user_timezone.settings:
+  type: config_object
+  label: 'User timezone settings'
+  mapping:
+    morning_start:
+      type: integer
+      label: 'Integer'
+    afternoon_start:
+      type: integer
+      label: 'Integer'
+    evening_start:
+      type: integer
+      label: 'Integer'
+    night_start:
+      type: integer
+      label: 'Integer'
