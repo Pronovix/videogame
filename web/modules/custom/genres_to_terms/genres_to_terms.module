@@ -24,7 +24,7 @@ function genres_to_terms_entity_presave(EntityInterface $entity): void {
     ]);
     $termnames = [];
     foreach ($terms as $term) {
-      $termnames[$term->name] = $term;
+      $termnames[$term->getName()] = $term;
     }
     $term_ids = [];
     foreach ($inputs as $input) {
