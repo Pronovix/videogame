@@ -1,0 +1,6 @@
+morning_start: 7
+afternoon_start: 12
+evening_start: 18
+night_start: 0
+_core:
+  default_config_hash: xPTQigzrlWKPe2CihLzWYYDtLaHpdmWAUNVNgqx4DMs

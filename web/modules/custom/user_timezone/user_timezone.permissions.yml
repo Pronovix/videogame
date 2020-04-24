@@ -1,0 +1,3 @@
+permission:
+  title: 'administer timezone configuration'
+  description: 'Administers time of day intervals'
