@@ -4,7 +4,6 @@ declare(strict_types = 1);
 
 namespace Drupal\user_timezone\Controller;
 
-use Drupal\Core\Config\Entity\Query\QueryFactory;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -23,23 +22,20 @@ class UserTimezoneRecommendationController extends ControllerBase {
   protected $entityTypeManager;
 
   /**
-   * The query factory.
+   * The recommendation.
    *
-   * @var \Drupal\Core\Config\Entity\QueryFactory
+   * @var \Drupal\user_timezone\UserTimezoneRecommendation
    */
-  protected $queryFactory;
+  protected $recommendation;
 
   /**
    * Constructs the UserTimezoneRecommendationController object.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entity type manager.
-   * @param \Drupal\Core\Config\Entity\QueryFactory $queryFactory
-   *   The query factory.
    */
-  public function __construct(EntityTypeManagerInterface $entityTypeManager, QueryFactory $queryFactory) {
+  public function __construct(EntityTypeManagerInterface $entityTypeManager) {
     $this->entityTypeManager = $entityTypeManager;
-    $this->queryFactory = $queryFactory;
   }
 
   /**
@@ -54,44 +50,52 @@ class UserTimezoneRecommendationController extends ControllerBase {
   /**
    * {@inheritdoc}
    */
-  public function index() {
-    return new JsonResponse([
-      'data' => $this->getData(),
-      'method' => 'GET',
-      'status' => 200,
-    ]
+  public function index(): array {
+    $json_array = array(
+      'data' => array()
     );
-  }
-
-  /**
-   * A helper function returning results.
-   *
-   * @return array
-   *   Returns the title and the url of the videogame product.
-   *
-   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
-   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
-   */
-  public function getData(): array {
-    $result = [];
     $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $nids = $query
       ->condition('type', 'article')
-      ->condition('status', TRUE)
-      ->condition('field_tags.entity.name', 'session time')
+      ->condition('status', '1')
+      ->condition('field_session_time.entity.name', $this->getTaxonomyName())
       ->execute();
 
     if ($nids) {
-      foreach ($nids as $node_id) {
-        $node = $this->entityTypeManager->getStorage('node_id');
-        $result[] = [
-          'id' => $node->id(),
-          'title' => $node->getTitle(),
-        ];
-      }
+      $node = $this->entityTypeManager->getStorage('node')->loadMultiple($nids);
+      array_rand($node);
+      $firstItem = reset($node);
+      return [
+        'Product name' => $firstItem->title->value,
+        'url' => $firstItem->toUrl()->toString(),
+      ];
     }
 
-    return $result;
+    return new JsonResponse($json_array);
+  }
+
+
+  public function getTaxonomyName(): string {
+    $recommendation = $this->recommendation->getRecommendation();
+    $productRecommendation = (string) $recommendation;
+
+    if ($productRecommendation == (string) $this->t('Play this game in the morning')) {
+      $taxonomy = '0.5 h';
+    }
+
+    elseif ($productRecommendation == (string) $this->t('Play this game in the afternoon')) {
+     $taxonomy = '1 h';
+    }
+
+    elseif ($productRecommendation == (string) $this->t('Play this game in the evening')) {
+     $taxonomy = 'more than 1 h';
+    }
+
+    else {
+      $taxonomy = 'more than 1 h';
+    }
+
+    return $taxonomy;
   }
 
 }

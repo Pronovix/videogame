@@ -5,7 +5,8 @@ declare(strict_types = 1);
 namespace Drupal\user_timezone;
 
 use Drupal\Component\Datetime\TimeInterface;
-use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -17,6 +18,13 @@ class UserTimezoneSalutation {
   use StringTranslationTrait;
 
   /**
+   * The value of time.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
    * The current user service.
    *
    * @var \Drupal\Core\Session\AccountInterface
@@ -26,7 +34,8 @@ class UserTimezoneSalutation {
   /**
    * {@inheritdoc}
    */
-  public function __construct(AccountProxyInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
+  public function __construct(ConfigFactoryInterface $configFactory, AccountInterface $currentUser, TimeInterface $time, TranslationInterface $stringTranslation) {
+    $this->configFactory = $configFactory;
     $this->currentUser = $currentUser;
     $this->time = $time;
     $this->stringTranslation = $stringTranslation;
@@ -48,25 +57,25 @@ class UserTimezoneSalutation {
     $time = (int) date('G', $this->time->getRequestTime());
 
     if ($time >= 06 && $time < 12) {
-      $salutation = $this->t('Good morning, %username!', [
+      $salutation = $this->t('Good morning %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
     elseif ($time >= 12 && $time < 18) {
-      $salutation = $this->t('Good afternoon, %username!', [
+      $salutation = $this->t('Good afternoon %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
     elseif ($time >= 18 && $time < 24) {
-      $salutation = $this->t('Good evening, %username!', [
+      $salutation = $this->t('Good evening %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
     else {
-      $salutation = $this->t('Good night, %username!', [
+      $salutation = $this->t('Good night %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }

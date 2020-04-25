@@ -1,0 +1,7 @@
+name: Genres to Terms
+description: Creates taxonony terms from the genre field value
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+
