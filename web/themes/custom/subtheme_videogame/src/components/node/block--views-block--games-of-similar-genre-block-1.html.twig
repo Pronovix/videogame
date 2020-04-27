@@ -11,7 +11,7 @@
   {{ title_prefix }}
   {% if label %}
     {% block label %}
-      <h2 class="product__similar-games-title"{{ title_attributes }}>{{ label }}</h2>
+      <h2 {{ title_attributes.addClass('product__similar-games-title') }}>{{ label }}</h2>
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
