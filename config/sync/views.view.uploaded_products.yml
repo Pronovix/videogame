@@ -11,6 +11,7 @@ dependencies:
   module:
     - image
     - node
+    - responsive_views_grid
     - user
 id: uploaded_products
 label: 'Uploaded products'
@@ -70,16 +71,16 @@ display:
             offset: false
             offset_label: Offset
       style:
-        type: grid
+        type: responsive_grid
         options:
           grouping: {  }
-          columns: 3
-          automatic_width: true
+          columns: '3'
+          automatic_width: 0
           alignment: horizontal
-          col_class_default: false
-          col_class_custom: 'views-col col-4'
-          row_class_default: true
-          row_class_custom: ''
+          col_class_default: 0
+          col_class_custom: 'views-col col-12 col-sm-8 col-md-4 col-lg-4'
+          row_class_default: 0
+          row_class_custom: 'views-row justify-content-center'
       row:
         type: fields
       fields:

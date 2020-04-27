@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^8.8",
         "drupal/pathauto": "^1.6",
         "drupal/radix": "^4.8",
+        "drupal/responsive_views_grid": "^1.1",
         "drupal/search_api": "1.x-dev",
         "drupal/similarterms": "^1.4",
         "drupal/views_role_based_global_text": "^1.1",

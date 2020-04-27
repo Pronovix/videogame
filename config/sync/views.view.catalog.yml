@@ -10,6 +10,7 @@ dependencies:
     - system.menu.main
   module:
     - image
+    - responsive_views_grid
     - search_api
     - text
 id: catalog
@@ -55,6 +56,9 @@ display:
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -63,20 +67,17 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
-        type: grid
+        type: responsive_grid
         options:
           grouping: {  }
-          columns: 3
-          automatic_width: true
+          columns: '3'
+          automatic_width: 0
           alignment: horizontal
-          col_class_default: false
-          col_class_custom: 'views-col col-4'
-          row_class_default: true
-          row_class_custom: ''
+          col_class_default: 0
+          col_class_custom: 'views-col col-12 col-sm-6 col-md-4 col-lg-4'
+          row_class_default: 0
+          row_class_custom: 'views-row justify-content-center'
       row:
         type: fields
         options:
@@ -193,7 +194,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image--marginless
+          element_class: catalog__image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
