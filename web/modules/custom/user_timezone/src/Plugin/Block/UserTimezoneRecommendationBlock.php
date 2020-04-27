@@ -29,11 +29,11 @@ class UserTimezoneRecommendationBlock extends BlockBase implements ContainerFact
   /**
    * Constructs the UserTimezoneRecommendationBlock object.
    *
-   * @param string $configuration
-   *   A configuration string containing information about the plugin instance.
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
    * @param string $plugin_id
    *   The plugin_ID for the plugin instance.
-   * @param string $plugin_definition
+   * @param mixed $plugin_definition
    *   The plugin implementation definition.
    * @param \Drupal\user_timezone\UserTimezoneRecommendation $recommendation
    *   The recommendation.
@@ -41,6 +41,7 @@ class UserTimezoneRecommendationBlock extends BlockBase implements ContainerFact
   public function __construct(array $configuration, string $plugin_id, $plugin_definition, UserTimezoneRecommendation $recommendation) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->recommendation = $recommendation;
+    $this->configuration = $configuration;
   }
 
   /**

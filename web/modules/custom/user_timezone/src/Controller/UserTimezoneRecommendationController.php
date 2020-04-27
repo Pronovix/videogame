@@ -51,9 +51,9 @@ class UserTimezoneRecommendationController extends ControllerBase {
    * {@inheritdoc}
    */
   public function index(): array {
-    $json_array = array(
-      'data' => array()
-    );
+    $json_array = [
+      'data' => [],
+    ];
     $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $nids = $query
       ->condition('type', 'article')
@@ -74,7 +74,9 @@ class UserTimezoneRecommendationController extends ControllerBase {
     return new JsonResponse($json_array);
   }
 
-
+  /**
+   * {@inheritdoc}
+   */
   public function getTaxonomyName(): string {
     $recommendation = $this->recommendation->getRecommendation();
     $productRecommendation = (string) $recommendation;
@@ -84,11 +86,11 @@ class UserTimezoneRecommendationController extends ControllerBase {
     }
 
     elseif ($productRecommendation == (string) $this->t('Play this game in the afternoon')) {
-     $taxonomy = '1 h';
+      $taxonomy = '1 h';
     }
 
     elseif ($productRecommendation == (string) $this->t('Play this game in the evening')) {
-     $taxonomy = 'more than 1 h';
+      $taxonomy = 'more than 1 h';
     }
 
     else {
