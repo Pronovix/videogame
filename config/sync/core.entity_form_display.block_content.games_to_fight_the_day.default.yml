@@ -1,0 +1,44 @@
+uuid: fb4226ec-f629-4a0e-b633-d3d684c50ae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.games_to_fight_the_day
+    - field.field.block_content.games_to_fight_the_day.body
+    - field.field.block_content.games_to_fight_the_day.field_image
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.games_to_fight_the_day.default
+targetEntityType: block_content
+bundle: games_to_fight_the_day
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

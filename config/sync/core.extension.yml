@@ -1,5 +1,6 @@
 module:
   automated_cron: 0
+  bg_img_field: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -9,6 +10,8 @@ module:
   comment: 0
   components: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   contact: 0
   contextual: 0
   ctools: 0
@@ -21,6 +24,7 @@ module:
   file: 0
   filter: 0
   genre_validator: 0
+  genres_to_terms: 0
   help: 0
   history: 0
   image: 0
@@ -33,11 +37,14 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  product_uploader: 0
   quickedit: 0
   rdf: 0
+  responsive_image: 0
   search_api: 0
   search_api_db: 0
   shortcut: 0
+  similarterms: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -46,6 +53,8 @@ module:
   tour: 0
   update: 0
   user: 0
+  user_timezone: 0
+  views_role_based_global_text: 0
   views_ui: 0
   menu_link_content: 1
   pathauto: 1

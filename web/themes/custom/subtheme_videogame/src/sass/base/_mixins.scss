@@ -1,7 +1,21 @@
 .btn-primary {
-    @include button-variant($orange, $orange, darken($lightgrey, 0%), darken($lightgrey,0%), darken($yellow,0%), darken($yellow,0%));
+  @include button-variant(
+    $orange,
+    $orange,
+    darken($whitesmoke, 0%),
+    darken($whitesmoke, 0%),
+    darken($yellow, 0%),
+    darken($yellow, 0%)
+  );
 }
 
 .btn-secondary {
-    @include button-variant($black, $orange, darken($darkgrey, 0%), darken($white,0%), darken($black,0%), darken($yellow,0%));
+  @include button-variant(
+    $black,
+    $orange,
+    darken($sanjuan, 0%),
+    darken($white, 0%),
+    darken($black, 0%),
+    darken($yellow, 0%)
+  );
 }

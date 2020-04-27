@@ -17,7 +17,7 @@ function subtheme_videogame_preprocess_page(array &$variables): void {
     // Create variable out of the current node type.
     $node_type = $variables['node']->getType();
     // Remove page title block.
-    if ($node_type == 'product') {
+    if ($node_type == 'product' || $node_type == 'front_page') {
       unset($variables['page']['header']['subtheme_videogame_page_title']);
     }
   }

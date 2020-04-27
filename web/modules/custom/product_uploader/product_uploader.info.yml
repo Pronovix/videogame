@@ -1,0 +1,6 @@
+name: Product Uploader module
+type: module
+description: 'Adds or removes the “Product uploader” role to the user.'
+package: Custom
+version: 1.0
+core: 8.x
