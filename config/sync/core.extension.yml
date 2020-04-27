@@ -24,6 +24,7 @@ module:
   file: 0
   filter: 0
   genre_validator: 0
+  genres_to_terms: 0
   help: 0
   history: 0
   image: 0

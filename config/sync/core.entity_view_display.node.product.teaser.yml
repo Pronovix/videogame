@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.product.body
+    - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
     - field.field.node.product.field_minimum_game_session_time
@@ -31,6 +32,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_genre_tags: true
   field_genres: true
   field_image: true
   field_minimum_game_session_time: true
