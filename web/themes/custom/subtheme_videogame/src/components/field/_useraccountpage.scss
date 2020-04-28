@@ -77,17 +77,3 @@
     justify-content: center;
   }
 }
-
-@include media-breakpoint-down(sm) {
-  .views-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  header .orangeupper,
-  footer .btn-secondary {
-    display: flex;
-    justify-content: center;
-  }
-}
