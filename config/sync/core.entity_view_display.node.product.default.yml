@@ -104,22 +104,6 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 1
-          416ea3ff-18dd-4d83-8714-5eb15cb96e21:
-            uuid: 416ea3ff-18dd-4d83-8714-5eb15cb96e21
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:product:field_genres'
-              formatter:
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-                type: string
-            additional: {  }
-            weight: 2
         third_party_settings: {  }
       -
         layout_id: layout_onecol
