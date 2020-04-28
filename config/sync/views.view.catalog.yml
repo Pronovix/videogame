@@ -55,6 +55,9 @@ display:
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -63,18 +66,15 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
       style:
         type: grid
         options:
           grouping: {  }
           columns: 3
-          automatic_width: true
+          automatic_width: false
           alignment: horizontal
-          col_class_default: false
-          col_class_custom: 'views-col col-4'
+          col_class_default: true
+          col_class_custom: 'col-12 col-sm-6 col-md-4 col-lg-4'
           row_class_default: true
           row_class_custom: ''
       row:
@@ -193,7 +193,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image--marginless
+          element_class: catalog__image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
