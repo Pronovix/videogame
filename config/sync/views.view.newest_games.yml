@@ -9,7 +9,6 @@ dependencies:
   module:
     - image
     - node
-    - responsive_views_grid
     - user
 id: newest_games
 label: 'Newest Games'
@@ -56,16 +55,16 @@ display:
           items_per_page: 3
           offset: 0
       style:
-        type: responsive_grid
+        type: grid
         options:
           grouping: {  }
-          columns: '3'
-          automatic_width: 0
+          columns: 3
+          automatic_width: false
           alignment: horizontal
-          col_class_default: 0
-          col_class_custom: 'views-col col-12 col-sm-8 col-md-4 col-lg-4'
-          row_class_default: 0
-          row_class_custom: 'views-row justify-content-center'
+          col_class_default: true
+          col_class_custom: 'col-12 col-sm-12 col-md-4 col-lg-4'
+          row_class_default: true
+          row_class_custom: ''
       row:
         type: fields
       fields:

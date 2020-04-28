@@ -46,3 +46,48 @@
     }
   }
 }
+
+@include media-breakpoint-down(xs) {
+  .user {
+    &__field {
+      &-first-name,
+      &-last-name,
+      &-self-summary {
+        flex-direction: column;
+        text-align: center;
+
+        .field__label {
+          margin-bottom: 0;
+        }
+      }
+
+      &-first-name,
+      &-last-name,
+      &-self-summary {
+        .field__item {
+          margin: 0 1rem 2rem 1rem;
+        }
+      }
+    }
+  }
+
+  header .orangeupper,
+  footer .btn-secondary {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .views-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header .orangeupper,
+  footer .btn-secondary {
+    display: flex;
+    justify-content: center;
+  }
+}
