@@ -27,7 +27,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
    *   The entity type manager.
-   * @param \Drupal\user_timezone\UserTimezoneSalutation
+   * @param \Drupal\user_timezone\UserTimezoneSalutation $salutation
    *   The salutation.
    */
   public function __construct(EntityTypeManagerInterface $entityTypeManager, UserTimezoneSalutation $salutation) {
