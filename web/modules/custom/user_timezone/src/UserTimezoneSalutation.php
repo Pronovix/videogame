@@ -54,7 +54,7 @@ class UserTimezoneSalutation {
    * {@inheritdoc}
    */
   public function getSalutation() {
-    $time = (int) date('G', $this->time->getRequestTime());
+    $time = (int) date('G', $this->time->getCurrentTime());
 
     if ($time >= 06 && $time < 12) {
       $salutation = $this->t('Good morning %username', [

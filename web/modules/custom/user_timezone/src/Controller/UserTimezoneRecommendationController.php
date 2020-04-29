@@ -53,7 +53,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
     $nids = $query
       ->condition('type', 'product')
       ->condition('status', '1')
-      ->condition('field_minimum_game_session_time.target_id', $this->getTaxonomyName())
+      ->condition('field_minimum_game_session_time.target_id', $this->getTaxonomyId())
       ->execute();
 
     if ($nids) {
@@ -61,7 +61,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       $firstItem = $node[array_rand($node, 1)];
       return new JsonResponse([
         'product_name' => $firstItem->label(),
-        'url' => $firstItem->toUrl()->toString(),
+        'url' => $firstItem->toUrl('canonical', ['absolute'=> TRUE])->toString(),
       ]);
     }
 
@@ -70,8 +70,9 @@ final class UserTimezoneRecommendationController extends ControllerBase {
 
   /**
    * {@inheritdoc}
+   * @return int|null
    */
-  public function getTaxonomyName(): string {
+  public function getTaxonomyId(): ?int {
     $greeting = $this->salutation->getSalutation();
     $productRecommendation = (string) $greeting;
 
@@ -91,7 +92,13 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       $taxonomy = 'more than 1 h';
     }
 
-    return $taxonomy;
+    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties([
+      'name' => $taxonomy,
+      'vid' => 'session_time',
+    ]);
+
+    return $terms?(int)reset($terms)->id():NULL;
+
   }
 
 }
