@@ -9,7 +9,12 @@
   }
 
   &__image {
-    opacity: 0.45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      opacity: 0.45;
+    }
   }
 
   &__description {
