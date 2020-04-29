@@ -8,6 +8,7 @@ use Drupal\Component\Datetime\TimeInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -18,7 +19,7 @@ class UserTimezoneSalutation {
   use StringTranslationTrait;
 
   /**
-   * The value of time.
+   * The config.
    *
    * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
@@ -30,6 +31,20 @@ class UserTimezoneSalutation {
    * @var \Drupal\Core\Session\AccountInterface
    */
   protected $currentUser;
+
+  /**
+   * The time.
+   *
+   * @var \Drupal\Component\Datetime\TimeInterface
+   */
+  protected $time;
+
+  /**
+   * The translation manager.
+   *
+   * @var \Drupal\Core\StringTranslation\TranslationInterface
+   */
+  protected $stringTranslation;
 
   /**
    * {@inheritdoc}
@@ -53,22 +68,25 @@ class UserTimezoneSalutation {
   /**
    * {@inheritdoc}
    */
-  public function getSalutation() {
-    $time = (int) date('G', $this->time->getCurrentTime());
+  public function getSalutation(): TranslatableMarkup {
+    $time = (int) date('G', $this->time->getRequestTime());
+    $configMorning = $this->configFactory->get('user_timezone.settings')->get('morning_start');
+    $configAfternoon = $this->configFactory->get('user_timezone.settings')->get('afternoon_start');
+    $configEvening = $this->configFactory->get('user_timezone.settings')->get('evening_start');
 
-    if ($time >= 06 && $time < 12) {
+    if ($time >= $configMorning && $time < $configAfternoon) {
       $salutation = $this->t('Good morning %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
-    elseif ($time >= 12 && $time < 18) {
+    elseif ($time >= $configAfternoon && $time < $configEvening) {
       $salutation = $this->t('Good afternoon %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);
     }
 
-    elseif ($time >= 18 && $time < 24) {
+    elseif ($time >= $configEvening && $time < 23) {
       $salutation = $this->t('Good evening %username', [
         '%username' => $this->currentUser->getAccountName(),
       ]);

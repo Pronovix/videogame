@@ -5,7 +5,7 @@ declare(strict_types = 1);
 namespace Drupal\user_timezone\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\user_timezone\UserTimezoneSalutation;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -23,15 +23,32 @@ final class UserTimezoneRecommendationController extends ControllerBase {
   protected $salutation;
 
   /**
+   * The node storage.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  private $nodeStorage;
+
+  /**
+   * The term storage.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  private $termStorage;
+
+  /**
    * Constructs the UserTimezoneRecommendationController object.
    *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entityTypeManager
-   *   The entity type manager.
+   * @param \Drupal\Core\Entity\EntityStorageInterface $nodeStorage
+   *   The node storage.
+   * @param \Drupal\Core\Entity\EntityStorageInterface $termStorage
+   *   The term storage.
    * @param \Drupal\user_timezone\UserTimezoneSalutation $salutation
    *   The salutation.
    */
-  public function __construct(EntityTypeManagerInterface $entityTypeManager, UserTimezoneSalutation $salutation) {
-    $this->entityTypeManager = $entityTypeManager;
+  public function __construct(EntityStorageInterface $nodeStorage, EntityStorageInterface $termStorage, UserTimezoneSalutation $salutation) {
+    $this->nodeStorage = $nodeStorage;
+    $this->termStorage = $termStorage;
     $this->salutation = $salutation;
   }
 
@@ -39,8 +56,10 @@ final class UserTimezoneRecommendationController extends ControllerBase {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
+    $entityTypeManager = $container->get('entity_type.manager');
     return new static(
-      $container->get('entity_type.manager'),
+      $entityTypeManager->getStorage('node'),
+      $entityTypeManager->getStorage('taxonomy_term'),
       $container->get('user_timezone.salutation')
     );
   }
@@ -49,7 +68,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
    * {@inheritdoc}
    */
   public function content(): JsonResponse {
-    $query = $this->entityTypeManager->getStorage('node')->getQuery();
+    $query = $this->nodeStorage->getQuery();
     $nids = $query
       ->condition('type', 'product')
       ->condition('status', '1')
@@ -57,7 +76,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       ->execute();
 
     if ($nids) {
-      $node = $this->entityTypeManager->getStorage('node')->loadMultiple($nids);
+      $node = $this->nodeStorage->loadMultiple($nids);
       $firstItem = $node[array_rand($node, 1)];
       return new JsonResponse([
         'product_name' => $firstItem->label(),
@@ -91,13 +110,12 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       $taxonomy = 'more than 1 h';
     }
 
-    $terms = $this->entityTypeManager->getStorage('taxonomy_term')->loadByProperties([
+    $terms = $this->termStorage->loadByProperties([
       'name' => $taxonomy,
       'vid' => 'session_time',
     ]);
 
     return $terms ? (int) reset($terms)->id() : NULL;
-
   }
 
 }
