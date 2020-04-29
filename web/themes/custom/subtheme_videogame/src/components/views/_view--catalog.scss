@@ -1,9 +1,8 @@
 .catalog {
   &__title {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
-    top: 7rem;
     z-index: 99;
     text-shadow: 0.05rem 0.05rem $orange;
     font-size: 1.2rem;
@@ -18,10 +17,24 @@
   }
 }
 
-.views-exposed-form {
-  display: flex;
+.views {
+ /* &-field-title {
+    position: absolute;
+    z-index: 999;
+  }*/
 
-  .js-form-item-search-api-fulltext {
-    width: 100%;
+  &-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-exposed-form {
+    display: flex;
+
+    .js-form-item-search-api-fulltext {
+      width: 100%;
+    }
   }
 }

@@ -82,6 +82,11 @@ display:
           row_class_custom: ''
       row:
         type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
         title:
           id: title
