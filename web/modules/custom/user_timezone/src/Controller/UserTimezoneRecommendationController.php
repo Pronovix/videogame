@@ -61,7 +61,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       $firstItem = $node[array_rand($node, 1)];
       return new JsonResponse([
         'product_name' => $firstItem->label(),
-        'url' => $firstItem->toUrl('canonical', ['absolute'=> TRUE])->toString(),
+        'url' => $firstItem->toUrl('canonical', ['absolute' => TRUE])->toString(),
       ]);
     }
 
@@ -70,7 +70,6 @@ final class UserTimezoneRecommendationController extends ControllerBase {
 
   /**
    * {@inheritdoc}
-   * @return int|null
    */
   public function getTaxonomyId(): ?int {
     $greeting = $this->salutation->getSalutation();
@@ -97,7 +96,7 @@ final class UserTimezoneRecommendationController extends ControllerBase {
       'vid' => 'session_time',
     ]);
 
-    return $terms?(int)reset($terms)->id():NULL;
+    return $terms ? (int) reset($terms)->id() : NULL;
 
   }
 
