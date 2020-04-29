@@ -1,11 +1,11 @@
-user_timezone.index:
+user_timezone.content:
   path: '/api/user-timezone/recommendation'
   defaults:
-    _controller: '\Drupal\user_timezone\Controller\UserTimezoneRecommendationController::index'
+    _controller: '\Drupal\user_timezone\Controller\UserTimezoneRecommendationController::content'
     _title: 'User timezone product recommendation'
   methods: [GET]
   requirements:
-    _access: 'access content'
+    _permission: 'access content'
 
 user_timezone.admin_config_timezone:
   path: /admin/config/timezone
