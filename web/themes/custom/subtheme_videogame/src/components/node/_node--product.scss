@@ -2,31 +2,55 @@
 // -----------------------------------------------------------------------------
 .product {
   &__title {
-    position: relative;
     display: flex;
     justify-content: center;
-    top: 23rem;
-    font-size: 3rem;
-    color: $gray-500;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $orange;
+    background: $gray-700;
+    font-weight: bold;
   }
 
   &__body {
     text-align: justify;
     background-color: $gray-700;
-    padding: 3rem;
+    padding: 1rem 3rem;
   }
 
   &__field-image {
-    opacity: 0.3;
-  }
-
-  &__field-genres {
-    text-align: center;
-    background-color: $gray-700;
+    opacity: 0.5;
   }
 
   &__similar-games-title {
+    margin-top: 2rem;
     font-size: 1rem;
-    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.product__field-genre-tags {
+  .field__label {
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+    color: $orange;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .field__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .field__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 0 0.5rem 0.5rem;
+      width: 120px;
+      height: 120px;
+      background-color: $gray-900;
+    }
   }
 }
