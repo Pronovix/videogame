@@ -83,10 +83,10 @@ display:
       row:
         type: fields
         options:
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
-          default_field_elements: true
       fields:
         title:
           id: title
@@ -190,7 +190,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image--marginless
+          element_class: catalog__image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
