@@ -7,13 +7,14 @@ dependencies:
     - image.style.product_image_style
     - node.type.product
     - taxonomy.vocabulary.genres
+    - taxonomy.vocabulary.session_time
   module:
     - image
     - node
     - taxonomy
     - user
 id: genre_page
-label: 'Genre page'
+label: 'Taxonomy page'
 module: views
 description: ''
 tag: ''
@@ -306,6 +307,7 @@ display:
           validate_options:
             bundles:
               genres: genres
+              session_time: session_time
             operation: view
             multiple: 0
             access: false
