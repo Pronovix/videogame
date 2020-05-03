@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.base_field_override.node.product.title
+    - core.entity_view_display.comment.comment.default
     - field.field.node.product.body
+    - field.field.node.product.field_comments
     - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
@@ -12,6 +14,7 @@ dependencies:
     - node.type.product
     - views.view.games_of_similar_genre
   module:
+    - comment
     - image
     - layout_builder
     - layout_discovery
@@ -146,6 +149,32 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Comments
+        components:
+          10f9943a-08a4-401b-adfe-2ebf4c832c84:
+            uuid: 10f9943a-08a4-401b-adfe-2ebf4c832c84
+            region: content
+            configuration:
+              id: 'field_block:node:product:field_comments'
+              label: Comments
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.product.default
 targetEntityType: node
 bundle: product
@@ -157,6 +186,15 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_comments:
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_genre_tags:
     weight: 6
