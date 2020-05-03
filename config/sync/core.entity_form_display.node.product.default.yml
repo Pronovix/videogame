@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.product.body
+    - field.field.node.product.field_comments
     - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
@@ -11,6 +12,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.product
   module:
+    - comment
     - image
     - path
     - text
@@ -35,6 +37,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_comments:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   field_genres:
     weight: 10
     settings:

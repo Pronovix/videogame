@@ -188,7 +188,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image
+          element_class: catalog__image--topmargin
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -449,6 +449,10 @@ display:
         type: normal
         title: 'Product Catalog'
         menu_name: main
+      cache:
+        type: none
+      defaults:
+        cache: false
     cache_metadata:
       max-age: -1
       contexts:
