@@ -5,6 +5,7 @@ style:
       assets/css/subtheme_videogame.style.css: {}
   js:
     assets/js/subtheme_videogame.script.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.min.js: { minified: true }
   dependencies:
     - core/jquery
     - core/drupal
