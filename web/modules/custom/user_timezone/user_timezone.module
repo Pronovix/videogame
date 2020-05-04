@@ -21,7 +21,7 @@ function user_timezone_cron(): void {
  * Implements hook_entity_presave().
  */
 function user_timezone_entity_presave(EntityInterface $node): void {
-  if ($node instanceof EntityInterface && $node->bundle() === 'product') {
+  if ($node instanceof NodeInterface && $node->bundle() === 'product') {
     Cache::invalidateTags(['user_timezone']);
   }
 }
