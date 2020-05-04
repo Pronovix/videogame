@@ -2,14 +2,14 @@
 
 /**
  * @file
- * This file stops cache for anonymous users and for product uploader users.
+ * This file stops cache for anonymous users and product uploader users.
  */
 
 declare(strict_types = 1);
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityInterface;
-use Druapl\node\NodeInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_cron().
