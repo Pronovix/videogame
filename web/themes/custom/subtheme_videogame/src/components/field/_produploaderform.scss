@@ -6,15 +6,18 @@
     color: $orange;
   }
 }
+
 .card-header,
 .card-body {
   background-color: $black;
+
   span {
     color: $orange;
   }
 }
 
-#edit-field-image-0--label {
+#edit-field-image-0--label,
+.form-item-field-minimum-game-session-time {
   color: $orange;
 }
 

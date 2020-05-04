@@ -4,9 +4,24 @@
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
+    padding-inline-start: 0;
   }
 
   li {
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
   }
+}
+
+.block--genretags {
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $orange;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.facet-item__value {
+  padding-left: 0.3rem;
 }
