@@ -6,6 +6,7 @@ namespace Drupal\user_timezone\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\user_timezone\UserTimezoneSalutation;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -27,6 +28,13 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
   protected $salutation;
 
   /**
+   * The current user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
+
+  /**
    * Constructs the UserTimezoneBlock object.
    *
    * @param array $configuration
@@ -37,10 +45,13 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
    *   The plugin implementation definition.
    * @param \Drupal\user_timezone\UserTimezoneSalutation $salutation
    *   The salutation.
+   * @param \Drupal\Core\Session\AccountInterface $currentUser
+   *   The current user.
    */
-  public function __construct(array $configuration, string $plugin_id, $plugin_definition, UserTimezoneSalutation $salutation) {
+  public function __construct(array $configuration, string $plugin_id, $plugin_definition, UserTimezoneSalutation $salutation, AccountInterface $currentUser) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->salutation = $salutation;
+    $this->currentUser = $currentUser;
   }
 
   /**
@@ -51,7 +62,8 @@ class UserTimezoneBlock extends BlockBase implements ContainerFactoryPluginInter
       $configuration,
       $plugin_id,
       $plugin_definition,
-      $container->get('user_timezone.salutation')
+      $container->get('user_timezone.salutation'),
+      $container->get('current_user')
     );
   }
 

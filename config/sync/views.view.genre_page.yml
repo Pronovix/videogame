@@ -70,23 +70,18 @@ display:
             offset: false
             offset_label: Offset
       style:
-        type: grid
+        type: default
         options:
           grouping: {  }
-          columns: 3
-          automatic_width: true
-          alignment: horizontal
-          col_class_default: false
-          col_class_custom: 'views-col col-4'
-          row_class_default: true
-          row_class_custom: ''
+          row_class: 'col-12 col-sm-6 col-md-6 col-lg-4'
+          default_row_class: true
       row:
         type: fields
         options:
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
-          default_field_elements: true
       fields:
         title:
           id: title
@@ -190,7 +185,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: div
-          element_class: catalog__image--marginless
+          element_class: catalog__image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
