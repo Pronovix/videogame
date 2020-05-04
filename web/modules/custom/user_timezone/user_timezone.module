@@ -2,16 +2,27 @@
 
 /**
  * @file
- * This file stops cache for anonymous users.
+ * This file stops cache for anonymous users and product uploader users.
  */
 
 declare(strict_types = 1);
 
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_cron().
  */
 function user_timezone_cron(): void {
   Cache::invalidateTags(['user_timezone']);
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function user_timezone_entity_presave(EntityInterface $node): void {
+  if ($node instanceof NodeInterface && $node->bundle() === 'product') {
+    Cache::invalidateTags(['user_timezone']);
+  }
 }
