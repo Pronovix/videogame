@@ -1,0 +1,23 @@
+uuid: 315a75bd-038d-4a4d-b06a-873f9a72c043
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.genre_tags
+  module:
+    - facets
+  theme:
+    - subtheme_videogame
+id: genretags
+theme: subtheme_videogame
+region: header
+weight: -7
+provider: null
+plugin: 'facet_block:genre_tags'
+settings:
+  id: 'facet_block:genre_tags'
+  label: 'Genre tags'
+  provider: facets
+  label_display: visible
+  block_id: genretags
+visibility: {  }

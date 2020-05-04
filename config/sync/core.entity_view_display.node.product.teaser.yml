@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.product.body
-    - field.field.node.product.field_comments
     - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
@@ -33,7 +32,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_comments: true
   field_genre_tags: true
   field_genres: true
   field_image: true

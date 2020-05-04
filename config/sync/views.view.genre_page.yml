@@ -7,14 +7,13 @@ dependencies:
     - image.style.product_image_style
     - node.type.product
     - taxonomy.vocabulary.genres
-    - taxonomy.vocabulary.session_time
   module:
     - image
     - node
     - taxonomy
     - user
 id: genre_page
-label: 'Taxonomy page'
+label: 'Genre page'
 module: views
 description: ''
 tag: ''
@@ -92,7 +91,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -159,8 +158,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "<span class=\"catalog__title\">{{ title }}</span>\r\n{{ field_image }}"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -307,7 +306,6 @@ display:
           validate_options:
             bundles:
               genres: genres
-              session_time: session_time
             operation: view
             multiple: 0
             access: false

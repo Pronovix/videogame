@@ -62,7 +62,6 @@ content:
     type: path
     weight: 8
     region: content
-
     settings: {  }
     third_party_settings: {  }
   timezone:
