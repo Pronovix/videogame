@@ -1,0 +1,106 @@
+uuid: 112bd544-91aa-4d97-a07b-836a1bddd71a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.front_page.body
+    - field.field.node.front_page.layout_builder__layout
+    - node.type.front_page
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Heroshot section'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Company information section'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Featured games'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Fight the day'
+          column_widths: 50-50
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Latest products title'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: 'Latest products section'
+          column_widths: 33-34-33
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Other games section title'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_fourcol_section
+        layout_settings:
+          label: 'Other games section'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Browse catalogue'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Genres to play section'
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'CTA section'
+        components: {  }
+        third_party_settings: {  }
+id: node.front_page.default
+targetEntityType: node
+bundle: front_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true
+  search_api_excerpt: true

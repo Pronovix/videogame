@@ -9,7 +9,7 @@ _core:
 id: subtheme_videogame_local_tasks
 theme: subtheme_videogame
 region: header
-weight: 10
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

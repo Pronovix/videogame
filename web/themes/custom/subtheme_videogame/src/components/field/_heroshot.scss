@@ -1,0 +1,19 @@
+.heroshot {
+  &__body {
+    padding: 8rem 0;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .heroshot__body {
+    padding: 5rem 0;
+
+    .heading1 {
+      font-size: 3.2rem;
+    }
+
+    .heading2 {
+      font-size: 2rem;
+    }
+  }
+}

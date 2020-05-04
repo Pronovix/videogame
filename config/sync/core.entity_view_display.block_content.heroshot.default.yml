@@ -1,0 +1,35 @@
+uuid: d2c87bd8-acdb-477e-a3ea-44776934b18a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.heroshot
+    - field.field.block_content.heroshot.body
+    - field.field.block_content.heroshot.field_background_image
+    - responsive_image.styles.custom_wide
+  module:
+    - bg_img_field
+    - text
+id: block_content.heroshot.default
+targetEntityType: block_content
+bundle: heroshot
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_background_image:
+    weight: 3
+    label: above
+    settings:
+      responsive_image_style: custom_wide
+      image_link: ''
+    third_party_settings: {  }
+    type: bg_img_field_formatter
+    region: content
+hidden:
+  search_api_excerpt: true

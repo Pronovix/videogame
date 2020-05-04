@@ -1,0 +1,11 @@
+.cta {
+  &__body {
+    margin-top: 3rem;
+    padding: 3rem 0;
+
+    p:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}

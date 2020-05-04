@@ -6,7 +6,13 @@ dependencies:
     - comment.type.comment
     - field.field.comment.comment.comment_body
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 _core:
   default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
 id: comment.comment.default
@@ -24,4 +30,7 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

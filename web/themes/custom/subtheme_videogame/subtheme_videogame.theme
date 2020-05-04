@@ -7,6 +7,22 @@
 
 declare(strict_types = 1);
 
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_preprocess_HOOK() for page.html.twig.
+ */
+function subtheme_videogame_preprocess_page(array &$variables): void {
+  if (isset($variables['node']) && $variables['node'] instanceof Node) {
+    // Create variable out of the current node type.
+    $node_type = $variables['node']->getType();
+    // Remove page title block.
+    if ($node_type == 'product' || $node_type == 'front_page') {
+      unset($variables['page']['header']['subtheme_videogame_page_title']);
+    }
+  }
+}
+
 // Include all files from the includes directory.
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {

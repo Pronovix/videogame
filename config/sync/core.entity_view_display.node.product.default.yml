@@ -3,15 +3,178 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.product.title
+    - core.entity_view_display.comment.comment.default
     - field.field.node.product.body
+    - field.field.node.product.field_comments
+    - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
     - field.field.node.product.field_minimum_game_session_time
     - node.type.product
+    - views.view.games_of_similar_genre
   module:
+    - comment
     - image
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Hero
+        components:
+          a9cd45ed-2512-4531-9e93-2f0d183f3ba2:
+            uuid: a9cd45ed-2512-4531-9e93-2f0d183f3ba2
+            region: content
+            configuration:
+              id: 'field_block:node:product:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: responsive_image
+                settings:
+                  responsive_image_style: custom_wide
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          ed2ac463-8452-4e2a-b10a-bfbe728681d3:
+            uuid: ed2ac463-8452-4e2a-b10a-bfbe728681d3
+            region: content
+            configuration:
+              id: 'field_block:node:product:title'
+              label: 'Product name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: description
+        components:
+          1e3cffb6-ec00-49f7-935b-4a971bd0a9fc:
+            uuid: 1e3cffb6-ec00-49f7-935b-4a971bd0a9fc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          4cc2e811-eea6-4ab8-bd97-85facd0bdacd:
+            uuid: 4cc2e811-eea6-4ab8-bd97-85facd0bdacd
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_genre_tags'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: sessiontime
+        components:
+          efecf171-c8f0-46cd-aad3-374b49d61dbc:
+            uuid: efecf171-c8f0-46cd-aad3-374b49d61dbc
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:product:field_minimum_game_session_time'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Similar
+        components:
+          b0c17254-51aa-4671-bcbe-9e18f5f31c75:
+            uuid: b0c17254-51aa-4671-bcbe-9e18f5f31c75
+            region: content
+            configuration:
+              id: 'views_block:games_of_similar_genre-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Comments
+        components:
+          10f9943a-08a4-401b-adfe-2ebf4c832c84:
+            uuid: 10f9943a-08a4-401b-adfe-2ebf4c832c84
+            region: content
+            configuration:
+              id: 'field_block:node:product:field_comments'
+              label: Comments
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.product.default
 targetEntityType: node
 bundle: product
@@ -24,16 +187,32 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_genres:
-    weight: 3
+  field_comments:
+    weight: 7
     label: above
     settings:
-      link_to_entity: false
+      view_mode: default
+      pager_id: 0
     third_party_settings: {  }
-    type: string
+    type: comment_default
+    region: content
+  field_genre_tags:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_genres:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_image:
-    weight: 2
+    weight: 0
     label: above
     settings:
       image_style: ''
@@ -42,7 +221,7 @@ content:
     type: image
     region: content
   field_minimum_game_session_time:
-    weight: 4
+    weight: 3
     label: above
     settings:
       link: true
@@ -50,8 +229,9 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 0
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,35 @@
+uuid: 07c28cdd-5465-4cb2-9d17-fa64b3d3e571
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.latest_products
+    - field.field.block_content.latest_products.body
+    - field.field.block_content.latest_products.field_image
+    - image.style.product_image_style
+  module:
+    - image
+    - text
+id: block_content.latest_products.default
+targetEntityType: block_content
+bundle: latest_products
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: product_image_style
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  search_api_excerpt: true

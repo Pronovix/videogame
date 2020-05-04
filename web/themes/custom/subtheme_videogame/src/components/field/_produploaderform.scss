@@ -1,0 +1,29 @@
+.field--name {
+  &-title,
+  &-body,
+  &-field-genres,
+  &-revision-log {
+    color: $orange;
+  }
+}
+
+.card-header,
+.card-body {
+  background-color: $black;
+
+  span {
+    color: $orange;
+  }
+}
+
+#edit-field-image-0--label,
+.form-item-field-minimum-game-session-time {
+  color: $orange;
+}
+
+.link-edit-summary {
+  background: black;
+  border: none;
+  color: orange;
+  padding: 0;
+}

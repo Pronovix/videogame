@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - ctools
     - system
   theme:
     - subtheme_videogame
@@ -11,7 +12,7 @@ _core:
 id: subtheme_videogame_breadcrumbs
 theme: subtheme_videogame
 region: header
-weight: -100
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:
@@ -19,4 +20,12 @@ settings:
   label: Breadcrumbs
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      front_page: front_page
+      product: product
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

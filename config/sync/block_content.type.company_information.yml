@@ -1,0 +1,8 @@
+uuid: fdd239ac-ef95-4b66-a193-ab172ba6b06b
+langcode: en
+status: true
+dependencies: {  }
+id: company_information
+label: 'Company information'
+revision: 0
+description: 'Short description of the company.'

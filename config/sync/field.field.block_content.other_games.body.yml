@@ -1,0 +1,23 @@
+uuid: 232f41fa-4b26-4780-865a-b9b5c2b9d1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.other_games
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.other_games.body
+field_name: body
+entity_type: block_content
+bundle: other_games
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,13 @@
+uuid: 8ba52b02-4dde-4722-82ae-5090d6d318e9
+langcode: en
+status: true
+dependencies: {  }
+id: product_uploader
+label: 'Product uploader'
+weight: 3
+is_admin: null
+permissions:
+  - 'create product content'
+  - 'delete own product content'
+  - 'display eu cookie compliance popup'
+  - 'edit own product content'

@@ -4,12 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.node.product.body
+    - field.field.node.product.field_comments
+    - field.field.node.product.field_genre_tags
     - field.field.node.product.field_genres
     - field.field.node.product.field_image
     - field.field.node.product.field_minimum_game_session_time
     - image.style.thumbnail
     - node.type.product
   module:
+    - comment
     - image
     - path
     - text
@@ -20,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 7
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -30,20 +33,26 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_comments:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   field_genres:
-    weight: 9
+    weight: 10
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: string_textarea
     region: content
   field_image:
-    weight: 8
+    weight: 0
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -51,14 +60,14 @@ content:
     type: image_image
     region: content
   field_minimum_game_session_time:
-    weight: 10
+    weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+    type: options_select
     region: content
   path:
     type: path
-    weight: 5
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -66,26 +75,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 6
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -93,7 +102,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -101,4 +110,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_genre_tags: true
