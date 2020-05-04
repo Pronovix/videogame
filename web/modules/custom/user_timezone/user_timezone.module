@@ -8,6 +8,7 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Cache\Cache;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_cron().
@@ -19,7 +20,7 @@ function user_timezone_cron(): void {
 /**
  * Implements hook_entity_presave().
  */
-function user_timezone_entity_presave(Drupal\node\NodeInterface $node) {
+function user_timezone_entity_presave(NodeInterface $node): void {
   if ($node instanceof NodeInterface && $node->bundle() === 'product') {
     Cache::invalidateTags(['user_timezone']);
   }
