@@ -2,7 +2,7 @@
 
 /**
  * @file
- * This file stops cache for anonymous users and product uploader users.
+ * This file stops cache for anonymous users and for product uploader users.
  */
 
 declare(strict_types = 1);
